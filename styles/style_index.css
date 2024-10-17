@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+section {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Jonction_des_pistes_de_ski_%C3%A0_Val_Thorens_%28hiver_2019%29.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+section h1{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15% 0px;
+    color: black;
+}
