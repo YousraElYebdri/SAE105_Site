@@ -4,82 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style_index.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <nav class="menu">
+    <header>
+        <nav class="menu">
         <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="vetement.html">VÊTEMENTS</a></li>
-            <li><a href="accessoire.html">ACCESSOIRES</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="vetements/vetement.html">VÊTEMENTS</a></li>
+            <li><a href="accessoire/accessoire.html">ACCESSOIRES</a></li>
             <li><a href="tutoriel.html">TUTORIEL</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <form method="post" action="Scripts/form.php">
-        <fieldset>
-            <legend>FORMULAIRE DE CONTACT</legend>
+</header>
+    
+    <main>
+        <form method="post" action="Scripts/form.php">
+            <fieldset>
+                <legend>FORMULAIRE DE CONTACT</legend>
+
+                <div>
+                    <label for="civilite">Civilité : </label>
+                    <select id="civilite" name="civilite">
+                        <option value="">Choisissez votre civilité</option>
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                        <option value="ng">Non Genré</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom">
+                </div>
+
+                <div>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom">
+                </div>
+
+                <div>
+                    <label for="adresse">Adresse :</label>
+                    <input type="texte" id="adresse" name="adresse">
+                </div>
+
+                <div>
+                    <label for="datenaissance">Date de Naissance :</label>
+                    <input type="date" id="datenaissance" name="datenaissance">
+                </div>
+
+                <div>
+                    <label for="mail">Adresse mail :</label>
+                    <input type="email" id="mail" name="mail" required>
+                </div>
+
+                <div>
+                    <label for="sport">Sport pratiqué :</label>
+                    <input type="checkbox" id="ski" name="sport" value="ski">
+                    <label for="ski">SKI</label>
+
+                    <input type="checkbox" id="sup" name="sport" value="sup">
+                    <label for="sup">SUP</label>
+
+                    <input type="checkbox" id="pav" name="sport" value="pav">
+                    <label for="pav">Planche à voile</label>
+                </div>
+
+
+            </fieldset>
 
             <div>
-                <label for="civilite">Civilité : </label>
-                <select id="civilite" name="civilite">
-                    <option value="">Choisissez votre civilité</option>
-                    <option value="homme">Homme</option>
-                    <option value="femme">Femme</option>
-                    <option value="ng">Non Genré</option>
-                </select>
+                <input type="reset" value="Effacer le formulaire">
+                <input type="submit" value="Envoyer le formulaire">
             </div>
 
-            <div>
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom">
-            </div>
-
-            <div>
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom">
-            </div>
-
-            <div>
-                <label for="adresse">Adresse :</label>
-                <input type="texte" id="adresse" name="adresse">
-            </div>
-
-            <div>
-                <label for="datenaissance">Date de Naissance :</label>
-                <input type="date" id="datenaissance" name="datenaissance">
-            </div>
-
-            <div>
-                <label for="mail">Adresse mail :</label>
-                <input type="email" id="mail" name="mail" required>
-            </div>
-
-            <div>
-                <label for="sport">Sport pratiqué :</label>
-                <input type="checkbox" id="ski" name="sport" value="ski">
-                <label for="ski">SKI</label>
-
-                <input type="checkbox" id="sup" name="sport" value="sup">
-                <label for="sup">SUP</label>
-
-                <input type="checkbox" id="pav" name="sport" value="pav">
-                <label for="pav">Planche à voile</label>
-            </div>
-
-
-        </fieldset>
-
-        <div>
-            <input type="reset" value="Effacer le formulaire">
-            <input type="submit" value="Envoyer le formulaire">
-        </div>
-
-        </fieldset>
-    </form>
-
+            </fieldset>
+        </form>
+    </main>
 </body>
 
 </html>
