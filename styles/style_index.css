@@ -1,14 +1,22 @@
-body {
-    margin: 0;
+/* Je définis le box-sizing globalement pour éviter les débordements de largeur dus aux padding et bordures */
+* {
+    box-sizing: border-box;
 }
 
+/* Je règle les paramètres de base pour le corps de la page */
+body {
+    margin: 0;
+    overflow-x: hidden; /* J'empêche tout débordement horizontal */
+}
+
+/* Je définis le style de la navigation */
 .menu {
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 30px 10px;
+    padding: 10px 10px;
     background-color: #12233b;
 }
 
@@ -16,25 +24,49 @@ body {
     display: flex;
     gap: 40px;
     list-style: none;
-    margin: 0;
+    padding: 0 90px; /* J'utilise un padding pour éviter le débordement au lieu de margin */
+    max-width: 100%;
 }
 
-.menu ul{
+.menu ul.left {
+    gap: 40px;
+}
+
+.menu ul.right {
     gap: 20px;
-    padding-right: 250px;
+    padding-right: 50px;
 }
 
-.menu li a {
+.menu .left li a {
     color: #ffffff;
     text-decoration: none;
-    font-family: "Chakra Petch", sans-serif;
+    font-family: "Rowdies", sans-serif;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: bold;
 }
+
+.menu .right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .menu li a:hover {
     color: #3f7acb;
 }
+
+.menu img {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    padding: 0;
+    margin: 10px 0px;
+    width: 50px;
+    max-width: 100%; /* J'empêche l'image de logo de provoquer un débordement */
+}
+
+/* Je définis le style du bandeau principal */
 #bandeau {
     background-image: url("../images/bandeau.jpeg");
     background-size: cover;
@@ -44,36 +76,38 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 57vh;
+    height: 99vh;
     margin: 0;
 }
 
 #bandeau div {
-    padding: 0px 150px;
+    padding: 0px 20px; /* Je limite le padding pour éviter les débordements horizontaux */
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     height: 75px;
-    width: 778.609375px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 #bandeau h1 {
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000b9;
-    font-family: "Chakra Petch", sans-serif;
+    font-family: "Rowdies", sans-serif;
     font-weight: bold;
-    font-size: 65px;
+    font-size: 50px;
     text-align: center;
     text-transform: uppercase;
-    margin: 20px 0px;
+    margin: 20px 2px;
     line-height: 40px;
 }
 
 #bandeau .btn {
     background-color: #12233b;
     color: #ffffff;
-    border:2px solid #12233b;
-    font-family: "Chakra Petch", sans-serif;
+    border: 2px solid #12233b;
+    border-radius: 7px;
+    font-family: "Rowdies", sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     display: inline-block;
@@ -89,10 +123,54 @@ body {
 #bandeau .btn:hover {
     background-color: #12233b45;
     border: 2px solid #12233b;
+    color: #12233b;
 }
 
+/* Je définis le style pour le séparateur horizontal */
 hr {
-    color :#12233b;
-    border: 1px solid #12233b;
-    margin:0;
+    display: block;
+    width: 100%; /* Je m'assure que le <hr> prend toute la largeur disponible */
+    color: #12233b;
+    border: 3px solid #12233b;
+    margin: 0;
+    clear: both;
+}
+
+/* Je configure la section sportHiver */
+#sportHiver {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* J'assure que la section utilise toute la largeur disponible */
+}
+
+#sportHiver div {
+    padding: 0px 20px; /* Je limite le padding pour éviter les débordements */
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#sportHiver h2 {
+    color: #673b8d;
+    font-family: "Rowdies", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    line-height: 40px;
+}
+
+#sportHiver p {
+    font-family: "Rowdies", sans-serif;
+    color: #12233b;
+    font-size: 15px;
+    text-align: left;
+    margin: 20px 0 30px; /* Je corrige la marge pour éviter les débordements horizontaux */
 }

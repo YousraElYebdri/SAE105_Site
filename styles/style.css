@@ -1,40 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Je définis le box-sizing globalement pour éviter les débordements de largeur dus aux padding et bordures */
+* {
+    box-sizing: border-box;
 }
 
-header {
-    text-align: center;
+/* Je règle les paramètres de base pour le corps de la page */
+body {
+    margin: 0;
+    overflow-x: hidden; /* J'empêche tout débordement horizontal */
+}
+
+/* Je définis le style de la navigation */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #12233b;
 }
 
 .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0 90px; /* J'utilise un padding pour éviter le débordement au lieu de margin */
+    max-width: 100%;
 }
 
-.menu li {
-    float: left;
+.menu ul.left {
+    gap: 40px;
 }
 
-.menu li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
+.menu ul.right {
+    gap: 20px;
+    padding-right: 50px;
+}
+
+.menu .left li a {
+    color: #ffffff;
     text-decoration: none;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu .right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .menu li a:hover {
-    color: #627ab1;
-    background-color: #627ab129;
+    color: #3f7acb;
 }
+
+.menu img {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    padding: 0;
+    margin: 10px 0px;
+    width: 50px;
+    max-width: 100%; /* J'empêche l'image de logo de provoquer un débordement */
+}
+
 
 main {
     margin: 20px;
+    display: flex;
+    margin: 40px 70px;
 }
 
 form {
@@ -42,20 +77,27 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 500px;
 }
 
 fieldset {
     border: none;
     margin-bottom: 15px;
 }
+label {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+}
 
 legend {
-    font-size: 1.2em;
+    font-size: 19px;
+    font-family: "Rowdies", sans-serif;
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], input[type="date"],input[type="adresse"] select {
-    width: 100%;
+input[type="text"], input[type="email"], input[type="date"], select {
+    display: block;
+    width: 300px;
     padding: 8px;
     margin: 5px 0 10px 0;
     border: 1px solid #ccc;
@@ -69,12 +111,14 @@ input[type="checkbox"] {
 input[type="submit"], input[type="reset"] {
     padding: 10px 20px;
     margin: 10px 5px;
-    border: none;
-    background-color: #333;
+    border: 1px solid #3f7acb;
+    border-radius: 8px;
+    background-color: #3f7acb;
     color: white;
     cursor: pointer;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: #555;
+    background-color: #12233b;
+    border: 1px solid #12233b;
 }
