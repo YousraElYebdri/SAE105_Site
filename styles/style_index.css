@@ -1,47 +1,98 @@
-* {
+body {
     margin: 0;
-    padding: 0;
 }
 
-section {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Jonction_des_pistes_de_ski_%C3%A0_Val_Thorens_%28hiver_2019%29.JPG");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-
-}
-
-section h1 {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 15% 0px;
-    color: black;
+.menu {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #12233b;
 }
 
 .menu ul {
-    list-style-type: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
 }
 
-.menu li {
-    float: right;
-    align-items: center;
+.menu ul{
+    gap: 20px;
+    padding-right: 250px;
 }
 
 .menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    color: #ffffff;
     text-decoration: none;
+    font-family: "Chakra Petch", sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+}
+.menu li a:hover {
+    color: #3f7acb;
+}
+#bandeau {
+    background-image: url("../images/bandeau.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 57vh;
+    margin: 0;
 }
 
-li a:hover {
-    color: #111;
+#bandeau div {
+    padding: 0px 150px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 75px;
+    width: 778.609375px;
+}
+
+#bandeau h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000b9;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+    font-size: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    line-height: 40px;
+}
+
+#bandeau .btn {
+    background-color: #12233b;
+    color: #ffffff;
+    border:2px solid #12233b;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 22px 50px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#bandeau .btn:hover {
+    background-color: #12233b45;
+    border: 2px solid #12233b;
+}
+
+hr {
+    color :#12233b;
+    border: 1px solid #12233b;
+    margin:0;
 }
