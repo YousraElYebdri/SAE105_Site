@@ -1,69 +1,113 @@
-/* Je définis le box-sizing globalement pour éviter les débordements de largeur dus aux padding et bordures */
+/* Global reset */
 * {
     box-sizing: border-box;
-}
-
-/* Je règle les paramètres de base pour le corps de la page */
-body {
     margin: 0;
-    overflow-x: hidden; /* J'empêche tout débordement horizontal */
+    padding: 0;
 }
 
-/* Je définis le style de la navigation */
+/* Style pour menu-info */
+.menu-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #673b8d;
+    padding: 2px 0; /* Très petit padding vertical pour réduire la hauteur */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* Liste droite dans menu-info */
+.menu-info .right-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace horizontal entre les éléments */
+    list-style: none;
+}
+
+.menu-info .right-info li {
+    margin: 0; /* Suppression des marges */
+    padding: 0 30px; /* Suppression des paddings */
+}
+
+.menu-info .right-info li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 8px; /* Taille inchangée */
+    
+}
+
+/* Style de la navigation */
 .menu {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 0;
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px 0;
     background-color: #12233b;
 }
 
+/* Style des listes dans chaque section */
 .menu ul {
     display: flex;
-    gap: 40px;
+    align-items: center;
     list-style: none;
-    padding: 0 90px; /* J'utilise un padding pour éviter le débordement au lieu de margin */
-    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.menu ul.left {
+/* Partie gauche (logo et nom) */
+.menu .left {
+    gap: 10px;
+    padding-left: 20px;
+}
+
+/* Partie centrale */
+.menu .center {
     gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
-.menu ul.right {
+/* Partie droite (panier) */
+.menu .right {
     gap: 20px;
-    padding-right: 50px;
+    padding-right: 20px;
 }
 
-.menu .left li a {
+/* Style des liens */
+.menu li a {
     color: #ffffff;
     text-decoration: none;
     font-family: "Rowdies", sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
+    transition: color 0.3s ease; /* Transition de couleur */
 }
-
 .menu .right li a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+.menu .right li a i {
+    color: #ffffff;
+    text-decoration: none;
     font-size: 20px;
+    transition: color 0.3s ease; /* Transition de couleur */
 }
 
+/* Couleur de survol */
 .menu li a:hover {
-    color: #3f7acb;
+    color: #3f7acb; /* Couleur au survol */
+}
+.menu li a i:hover {
+    color: #3f7acb; /* Couleur au survol */
 }
 
-.menu img {
-    position: absolute;
-    top: 0;
-    left: 70px;
-    padding: 0;
-    margin: 10px 0px;
-    width: 50px;
-    max-width: 100%; /* J'empêche l'image de logo de provoquer un débordement */
+/* Logo */
+.menu .logo {
+    width: 30px;
+    max-width: 100%;
 }
 
 /* Je définis le style du bandeau principal */
@@ -76,7 +120,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 99vh;
+    height: 55vh;
     margin: 0;
 }
 
@@ -108,22 +152,77 @@ body {
     border: 2px solid #12233b;
     border-radius: 7px;
     font-family: "Rowdies", sans-serif;
-    font-size: 18px;
+    font-size: 13px;
     text-transform: uppercase;
     display: inline-block;
-    padding: 22px 50px;
+    padding: 18px 30px;
     margin: 20px 0;
     border: none;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Transition de couleur uniquement */
 }
 
 #bandeau .btn:hover {
     background-color: #12233b45;
     border: 2px solid #12233b;
     color: #12233b;
+    padding: 18px 30px; /* Padding reste constant pour éviter l'agrandissement */
+}
+
+.article-galerie {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style pour les articles de la galerie */
+.article {
+    position: relative;
+    width: 310px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease; /* Transition d'ombre seulement */
+    text-decoration: none;
+}
+
+/* Supprimez l'effet d'agrandissement au survol */
+.article:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus grande sans agrandissement */
+}
+
+.article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texte centré avec fond couvrant toute l'image */
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #673b8d43;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Rowdies", sans-serif;
+    transition: opacity 0.3s ease;
+}
+
+/* Disparition du texte au survol */
+.article:hover .text {
+    opacity: 0;
 }
 
 /* Je définis le style pour le séparateur horizontal */
@@ -147,7 +246,7 @@ hr {
 }
 
 #sportHiver div {
-    padding: 0px 20px; /* Je limite le padding pour éviter les débordements */
+    padding: 0px 10px; /* Je limite le padding pour éviter les débordements */
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -174,3 +273,38 @@ hr {
     text-align: left;
     margin: 20px 0 30px; /* Je corrige la marge pour éviter les débordements horizontaux */
 }
+
+/* Alignement du bouton à gauche */
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Style pour le bouton sans effet de redimensionnement */
+#sportHiver .btn {
+    background-color: #673b8d;
+    color: #ffffff;
+    border: 2px solid #673b8d;
+    border-radius: 7px;
+    font-family: "Rowdies", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 18px 30px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+/* Supprimez l'agrandissement du padding au survol */
+#sportHiver .btn:hover {
+    background-color: #673b8d45;
+    border: 2px solid #673b8d;
+    color: #673b8d;
+    padding: 18px 30px; /* Pas de changement de padding au survol */
+}
+
+

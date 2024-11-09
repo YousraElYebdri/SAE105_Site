@@ -17,27 +17,44 @@
 
 <body>
 
+    <nav class="menu-info">
+        <ul class="right-info">
+            <li><a href="#">MON COMPTE</a></li>
+        </ul>
+    </nav>
+
+
     <nav class="menu">
+        <!-- Partie droite avec logo et nom -->
         <ul class="left">
             <li>
                 <a href="index.html">
                     <img src="images/favicon.png" alt="Logo" class="logo">
                 </a>
             </li>
+            <li><a href="index.html">MMI SDG</a></li>
+        </ul>
+        
+        <!-- Partie centrale -->
+        <ul class="center">
             <li><a href="vetements/vetement.html">Vêtements</a></li>
             <li><a href="accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="tutoriel.html">Tutoriel</a></li>
-            <li><a href="contact.html">À propos</a></li>
-        </ul>
+            
+        </ul>    
+
+        <!-- Partie droite -->
         <ul class="right">
-            <li><a href="panier.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            <li><a href="panier.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="contact.html">À propos</a></li>
         </ul>
     </nav>
 
     <section id="bandeau">
         <div>
             <h1>Explorez les sports d'hiver</h1>
-            <a class="btn" href="tutoriel.html">Tutoriel Sport d'hiver</a>
+            <a class="btn" href="vetements/vetement.html">Vêtements</a>
+            <a class="btn" href="accessoire/accessoire.html">Accesoires</a>
         </div>
     </section>
     <hr>
@@ -51,8 +68,33 @@
             <p>Explorez nos collections et trouvez l’équipement qui vous correspond pour profiter pleinement de la
                 montagne. La neige vous attend !</p>
         </div>
+        
     </section>
+    <section class="article-galerie">
+        <a href="vetements/vetementsHomme/homme.html" class="article">
+            <img src="images/index/pexels-chris-f-38966-16248302.jpg" alt="Article Image 1">
+            <div class="text">Homme</div>
+        </a>
+        <a href="vetements/vetementsFemme/femme.html" class="article">
+            <img src="images/index/pexels-cottonbro-7364438.jpg" alt="Article Image 2">
+            <div class="text">Femme</div>
+        </a>
+        <a href="vetements/vetementsEnfant/enfant.html" class="article">
+            <img src="images/index/pexels-hurrahsuhail-11156954.jpg" alt="Article Image 3">
+            <div class="text">Enfant</div>
+        </a>
+    </section>
+
     <hr>
+    <section id="sportHiver">
+        <div>
+            <h2>En quête de perfection ? Nos tutoriels d’experts pour chaque discipline ! </h2>
+            <p>Plongez dans l’apprentissage de vos sports d’hiver préférés grâce à nos tutoriels dédiés ! Que ce soit pour la luge, les raquettes, le ski alpin ou le snowboard, nos guides détaillés vous offrent astuces, techniques et conseils de sécurité pour que chaque sortie en montagne soit une réussite. Préparez-vous à dompter la neige et à vivre des sensations uniques ! Cliquez ci-dessous pour accéder à nos tutoriels et faire de chaque instant en montagne une véritable aventure.</p>
+        </div>
+        <div class="btn-container">
+            <button class="btn" href="tutoriel.html">Tutoriels</button>
+        </div>
+    </section>
 
 </body>
 
