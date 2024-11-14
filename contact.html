@@ -34,14 +34,14 @@
             </li>
             <li><a href="index.html">MMI SDG</a></li>
         </ul>
-        
+
         <!-- Partie centrale -->
         <ul class="center">
             <li><a href="vetements/">Vêtements</a></li>
             <li><a href="accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="tutoriel.html">Tutoriel</a></li>
-            
-        </ul>    
+
+        </ul>
 
         <!-- Partie droite -->
         <ul class="right">
@@ -104,13 +104,45 @@
                     <label for="pav">Planche à voile</label>
                 </div>
 
+                <div class="map-container">
+                    <caption> Zone pratiqué </caption>
+                    <!-- Image de la carte avec la map associée -->
+                    <img src="images/contact/carteAlpesNord.jpeg" alt="carte de zone de lieu pratique du sport"
+                        usemap="#carte">
+
+                    <!-- Définition des zones cliquables -->
+                    <map name="carte">
+                        <area target="" alt="Zone 1" title="Zone 1" href="#" coords="323,129,332,131" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Zone 1'">
+                        <area target="" alt="Annemasse" title="Annemasse" href="#" coords="273,99,374,164" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Annemasse'">
+                        <area target="" alt="Annecy" title="Annecy" href="#" coords="230,245,341,317" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Annecy'">
+                        <area target="" alt="Grenoble" title="Grenoble" href="#" coords="110,574,181,627" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Grenoble'">
+                        <area target="" alt="Thonon-les-Bains" title="Thonon-les-Bains" href="#" coords="343,24,434,94"
+                            shape="rect" onclick="document.getElementById('zoneSelectionnee').value='Thonon-les-Bains'">
+                        <area target="" alt="Albertville" title="Albertville" href="#" coords="336,354,423,418"
+                            shape="rect" onclick="document.getElementById('zoneSelectionnee').value='Albertville'">
+                        <area target="" alt="Aix-les-Bains" title="Aix-les-Bains" href="#" coords="167,336,260,389"
+                            shape="rect" onclick="document.getElementById('zoneSelectionnee').value='Aix-les-Bains'">
+                        <area target="" alt="Chambéry" title="Chambéry" href="#" coords="184,396,269,448" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Chambéry'">
+                        <area target="" alt="Briançon" title="Briançon" href="#" coords="405,707,493,776" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Briançon'">
+                    </map>
+
+                    <!-- Champ pour afficher la zone sélectionnée -->
+                    <input type="text" id="zoneSelectionnee" placeholder="Zone sélectionnée" readonly>
+                </div>
+
 
             </fieldset>
 
             <div>
                 <input type="submit" value="Envoyer le formulaire">
                 <input type="reset" value="Effacer le formulaire">
-                
+
             </div>
 
             </fieldset>
