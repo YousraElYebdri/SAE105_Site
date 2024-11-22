@@ -182,7 +182,7 @@
 /* Style pour les articles de la galerie */
 .article {
     position: relative;
-    width: 310px;
+    width: 400px;
     height: 250px;
     overflow: hidden;
     border-radius: 12px;
@@ -252,7 +252,7 @@ hr {
     text-align: center;
     height: auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1250px;
 }
 
 #sportHiver h2 {
@@ -260,7 +260,7 @@ hr {
     font-family: "Rowdies", sans-serif;
     font-weight: bold;
     font-size: 30px;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     margin: 20px 0px;
     line-height: 40px;
@@ -270,14 +270,14 @@ hr {
     font-family: "Rowdies", sans-serif;
     color: #12233b;
     font-size: 15px;
-    text-align: left;
+    text-align: center;
     margin: 20px 0 30px; /* Je corrige la marge pour éviter les débordements horizontaux */
 }
 
 /* Alignement du bouton à gauche */
 .btn-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 /* Style pour le bouton sans effet de redimensionnement */
@@ -293,7 +293,7 @@ hr {
     margin: 20px 0;
     border: none;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease; /* Transition de couleur */

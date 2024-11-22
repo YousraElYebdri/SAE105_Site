@@ -37,7 +37,7 @@
 
         <!-- Partie centrale -->
         <ul class="center">
-            <li><a href="vetements/">Vêtements</a></li>
+            <li><a href="vetements/vetement.html">Vêtements</a></li>
             <li><a href="accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="tutoriel.html">Tutoriel</a></li>
 
@@ -55,97 +55,106 @@
     <main>
         <form method="post" action="Scripts/form.php">
             <fieldset>
-                <legend>FORMULAIRE DE CONTACT</legend>
+                <div class="formText">
+                    <legend>FORMULAIRE DE CONTACT</legend>
 
-                <div>
-                    <label for="civilite">Civilité : </label>
-                    <select id="civilite" name="civilite">
-                        <option value="">Choisissez votre civilité</option>
-                        <option value="homme">Homme</option>
-                        <option value="femme">Femme</option>
-                        <option value="ng">Non Genré</option>
-                    </select>
+                    <div>
+                        <label for="civilite">Civilité : </label>
+                        <select id="civilite" name="civilite">
+                            <option value="">Choisissez votre civilité</option>
+                            <option value="homme">Homme</option>
+                            <option value="femme">Femme</option>
+                            <option value="ng">Non Genré</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom">
+                    </div>
+
+                    <div>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom">
+                    </div>
+
+                    <div>
+                        <label for="adresse">Adresse :</label>
+                        <input type="text" id="adresse" name="adresse">
+                    </div>
+
+                    <div>
+                        <label for="datenaissance">Date de Naissance :</label>
+                        <input type="date" id="datenaissance" name="datenaissance">
+                    </div>
+
+                    <div>
+                        <label for="mail">Adresse mail :</label>
+                        <input type="email" id="mail" name="mail" required>
+                    </div>
+
+                    <div>
+                        <label for="sport">Sport pratiqué :</label>
+                        <div>
+                            <input type="checkbox" id="ski" name="ski" value="SKI">
+                            <label for="ski">SKI</label>
+
+                            <input type="checkbox" id="sup" name="sup" value="SUP">
+                            <label for="sup">SUP</label>
+
+                            <input type="checkbox" id="pav" name="pav" value="Planche à voile">
+                            <label for="Planche à voile">Planche à voile</label>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div>
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom">
-                </div>
-
-                <div>
-                    <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom">
-                </div>
-
-                <div>
-                    <label for="adresse">Adresse :</label>
-                    <input type="text" id="adresse" name="adresse">
-                </div>
-
-                <div>
-                    <label for="datenaissance">Date de Naissance :</label>
-                    <input type="date" id="datenaissance" name="datenaissance">
-                </div>
-
-                <div>
-                    <label for="mail">Adresse mail :</label>
-                    <input type="email" id="mail" name="mail" required>
-                </div>
-
-                <div>
-                    <label for="sport">Sport pratiqué :</label>
-                    <input type="checkbox" id="ski" name="sport" value="ski">
-                    <label for="ski">SKI</label>
-
-                    <input type="checkbox" id="sup" name="sport" value="sup">
-                    <label for="sup">SUP</label>
-
-                    <input type="checkbox" id="pav" name="sport" value="pav">
-                    <label for="pav">Planche à voile</label>
-                </div>
 
                 <div class="map-container">
-                    <caption> Zone pratiqué </caption>
+                    <legend> ZONE PRATIQUÉ </legend>
                     <!-- Image de la carte avec la map associée -->
-                    <img src="images/contact/carteAlpesNord.jpeg" alt="carte de zone de lieu pratique du sport"
-                        usemap="#carte">
+                    <img class="carte" src="images/contact/carteAlpesNord.webp"
+                        alt="carte de zone de lieu pratique du sport" usemap="#carte">
 
                     <!-- Définition des zones cliquables -->
                     <map name="carte">
-                        <area target="" alt="Zone 1" title="Zone 1" href="#" coords="323,129,332,131" shape="rect"
-                            onclick="document.getElementById('zoneSelectionnee').value='Zone 1'">
-                        <area target="" alt="Annemasse" title="Annemasse" href="#" coords="273,99,374,164" shape="rect"
-                            onclick="document.getElementById('zoneSelectionnee').value='Annemasse'">
-                        <area target="" alt="Annecy" title="Annecy" href="#" coords="230,245,341,317" shape="rect"
-                            onclick="document.getElementById('zoneSelectionnee').value='Annecy'">
-                        <area target="" alt="Grenoble" title="Grenoble" href="#" coords="110,574,181,627" shape="rect"
-                            onclick="document.getElementById('zoneSelectionnee').value='Grenoble'">
-                        <area target="" alt="Thonon-les-Bains" title="Thonon-les-Bains" href="#" coords="343,24,434,94"
-                            shape="rect" onclick="document.getElementById('zoneSelectionnee').value='Thonon-les-Bains'">
-                        <area target="" alt="Albertville" title="Albertville" href="#" coords="336,354,423,418"
-                            shape="rect" onclick="document.getElementById('zoneSelectionnee').value='Albertville'">
-                        <area target="" alt="Aix-les-Bains" title="Aix-les-Bains" href="#" coords="167,336,260,389"
-                            shape="rect" onclick="document.getElementById('zoneSelectionnee').value='Aix-les-Bains'">
-                        <area target="" alt="Chambéry" title="Chambéry" href="#" coords="184,396,269,448" shape="rect"
-                            onclick="document.getElementById('zoneSelectionnee').value='Chambéry'">
-                        <area target="" alt="Briançon" title="Briançon" href="#" coords="405,707,493,776" shape="rect"
-                            onclick="document.getElementById('zoneSelectionnee').value='Briançon'">
+                        <area target="" alt="Thonon-les-bains" title="Thonon-les-bains" href="#" coords="174,12,301,52"
+                            shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Thonon-les-bains'"></area>
+
+                        <area target="" alt="Annemasse" title="Annemasse" href="#" coords="117,52,203,98" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Annemasse'"></area>
+
+                        <area target="" alt="Annecy" title="Annecy" href="#" coords="97,121,169,154" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Annecy'"></area>
+
+                        <area target="" alt="Aix-les-bains" title="Aix-les-bains" href="#" coords="42,162,133,192"
+                            shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Aix-les-bains'"></area>
+
+                        <area target="" alt="Albertville" title="Albertville" href="#" coords="163,175,241,209"
+                            shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Albertville'"></area>
+
+                        <area target="" alt="Chambéry" title="Chambéry" href="#" coords="66,197,146,226" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Chambéry'"></area>
+
+                        <area target="" alt="Grenoble" title="Grenoble" href="#" coords="30,282,108,323" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Grenoble'"></area>
+
+                        <area target="" alt="briancon" title="briancon" href="#" coords="192,350,266,388" shape="rect"
+                            onclick="document.getElementById('zoneSelectionnee').value='Briançon'"></area>
                     </map>
 
                     <!-- Champ pour afficher la zone sélectionnée -->
                     <input type="text" id="zoneSelectionnee" placeholder="Zone sélectionnée" readonly>
                 </div>
 
-
             </fieldset>
-
             <div>
-                <input type="submit" value="Envoyer le formulaire">
-                <input type="reset" value="Effacer le formulaire">
-
+                <input class="bouton" type="submit" value="Envoyer le formulaire">
+                <input class="bouton" type="reset" value=" Effacer le formulaire ">
             </div>
-
-            </fieldset>
         </form>
     </main>
 </body>

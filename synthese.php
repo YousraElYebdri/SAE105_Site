@@ -13,6 +13,10 @@
     <p>Adresse : <?php echo $adresse ?></p>
     <p>Date de Naissance : <?php echo $datenaissance ?></p>
     <p>Adresse mail : <?php echo $mail ?></p>
-    <p>Sport pratiqué  : <?php echo $sport ?></p>
+    <p>Sport pratiqué  : 
+        <?php foreach ($sport as $element){
+        echo $element . ' ';
+        } ?>
+    </p>
 </body>
 </html>
