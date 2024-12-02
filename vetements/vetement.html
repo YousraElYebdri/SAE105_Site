@@ -18,15 +18,19 @@
 
 <body>
 
+
     <nav class="menu-info">
         <ul class="right-info">
             <li><a href="#">MON COMPTE</a></li>
+            <!-- Navigation rapide vers la gestion du compte utilisateur -->
         </ul>
     </nav>
 
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
+        <!-- Menu principal contenant les trois sections : gauche (logo), centre (catégories), droite (panier et à propos) -->
+        
         <ul class="left">
+            <!-- Section gauche : logo -->
             <li>
                 <a href="../index.html">
                     <img src="../images/favicon.png" alt="Logo" class="logo">
@@ -35,45 +39,45 @@
             <li><a href="../index.html">MMI SDG</a></li>
         </ul>
 
-        <!-- Partie centrale -->
         <ul class="center">
+            <!-- Section centrale : liens vers les catégories principales -->
             <li><a href="vetement.html">Vêtements</a></li>
             <li><a href="../accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="../tutoriel.html">Tutoriel</a></li>
-
         </ul>
 
-        <!-- Partie droite -->
         <ul class="right">
+            <!-- Section droite : icône de panier et lien "À propos" -->
             <li><a href="../panier.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <li><a href="../contact.html">À propos</a></li>
         </ul>
     </nav>
 
     <nav class="sous-menu">
-
+        <!-- Menu secondaire avec des options de filtrage par catégorie (femme, homme, enfant) -->
         <ul class="center">
             <li><input class="sous-menu-check" type="checkbox" id="femme"><label class="sous-menu-value" for="femme">FEMME</label></li>
             <li><input class="sous-menu-check" type="checkbox" id="homme"><label class="sous-menu-value" for="homme">HOMME</label></li>
             <li><input class="sous-menu-check" type="checkbox" id="enfant"><label class="sous-menu-value" for="enfant">ENFANT</label></li>
         </ul>
-
     </nav>
 
     <section class="article-vetements">
+        <!-- Section principale des vêtements avec une galerie d'articles pour chaque catégorie -->
+        
         <section class="vetement">
+            
             <section class="femme">
+                <!-- Vêtements pour femmes -->
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementFemme/blousonSki.webp" alt="Blouson Ski Femme"
-                        loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/blousonSki.webp" alt="Blouson Ski Femme" loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Femme</p>
                         <p class="price">129,99 €</p>
                     </div>
                 </a>
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
-                        alt="Pantalon Ski Femme" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp" alt="Pantalon Ski Femme" loading="lazy">
                     <div class="details">
                         <p class="name">Pantalon Ski Femme</p>
                         <p class="price">89,99 €</p>
@@ -82,17 +86,16 @@
             </section>
 
             <section class="homme">
+                <!-- Vêtements pour hommes -->
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementHomme/blousonSkiDevant.webp"
-                        alt="Blouson Ski Homme" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementHomme/blousonSkiDevant.webp" alt="Blouson Ski Homme" loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Homme</p>
                         <p class="price">139,99 €</p>
                     </div>
                 </a>
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementHomme/basSki.webp" alt="Pantalon Ski Homme"
-                        loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementHomme/basSki.webp" alt="Pantalon Ski Homme" loading="lazy">
                     <div class="details">
                         <p class="name">Pantalon Ski Homme</p>
                         <p class="price">99,99 €</p>
@@ -101,23 +104,23 @@
             </section>
 
             <section class="enfant">
+                <!-- Vêtements pour enfants -->
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp"
-                        alt="Blouson Ski Enfant" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp" alt="Blouson Ski Enfant" loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Enfant</p>
                         <p class="price">79,99 €</p>
                     </div>
                 </a>
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp"
-                        alt="Pantalon Ski Enfant" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp" alt="Pantalon Ski Enfant" loading="lazy">
                     <div class="details">
                         <p class="name">Pantalon Ski Enfant</p>
                         <p class="price">69,99 €</p>
                     </div>
                 </a>
             </section>
+
         </section>
     </section>
 

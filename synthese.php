@@ -18,5 +18,6 @@
         echo $element . ' ';
         } ?>
     </p>
+    </p> <?php echo "Zone sélectionnée : " . htmlspecialchars($zoneSelectionnee);?>
 </body>
 </html>

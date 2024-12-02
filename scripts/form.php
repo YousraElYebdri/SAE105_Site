@@ -7,21 +7,27 @@
     $adresse = $_POST['adresse'];
     $civilite = $_POST['civilite'];
     $datenaissance = $_POST['datenaissance'];
+    $zoneSelectionnee = isset($_POST['zoneSelectionnee']) ? $_POST['zoneSelectionnee'] : 'Non spécifiée';
 
 $compteur=0;
 
 if (isset($_POST[ 'ski'])){
     $compteur++;
-    $sport['SKI']= $_POST['ski'];
+    $sport['SKI Alpin']= $_POST['ski'];
 }
-if(isset($_POST[ 'sup'])){
+if(isset($_POST[ 'rqt'])){
     $compteur++;
-    $sport['SUP']= $_POST['sup'];
+    $sport['Raquettes']= $_POST['rqt'];
 }
-if(isset($_POST[ 'pav'])){
+if(isset($_POST[ 'luge'])){
     $compteur++;
-    $sport['Planche à voile']= $_POST['pav'];
+    $sport['Luge']= $_POST['luge'];
 }
+if(isset($_POST[ 'swb'])){
+    $compteur++;
+    $sport['Snowboard']= $_POST['swb'];
+}
+
 
     include('../synthese.php')
 
