@@ -149,6 +149,27 @@
     color: #3f7acb; /* Couleur au survol */
 }
 
+/* Pour cacher les checkbox des menu cliquant */
+.sous-menu-check {
+    visibility: hidden;
+
+}
+
+body:has(#femme:checked) .enfant,
+body:has(#femme:checked) .homme {
+    display: none;
+}
+
+body:has(#homme:checked) .enfant,
+body:has(#homme:checked) .femme {
+    display: none;
+}
+body:has(#enfant:checked) .femme,
+body:has(#enfant:checked) .homme {
+    display: none;
+}
+
+
 main {
     margin: 20px;
     display: flex;
