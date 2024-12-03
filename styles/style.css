@@ -135,7 +135,7 @@
 }
 
 /* Style des liens */
-.sous-menu li {
+.sous-menu li a {
     color: #ffffff;
     text-decoration: none;
     font-family: "Rowdies", sans-serif;
@@ -299,7 +299,7 @@ form h2{
     box-shadow: 0 0 8px #12233b99;
 }
 
-/* Style général pour les sections */
+/* Style général pour les sections 
 section.article-vetements, section.article-ssvetement, section.article-gant, section.article-chaussure, section.article-lunette {
     margin: 20px auto;
     padding: 20px;
@@ -307,7 +307,7 @@ section.article-vetements, section.article-ssvetement, section.article-gant, sec
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 /* Flexbox pour une disposition propre */
 section.vetement, section.sous-vetement, section.gant, section.chaussure, section.lunette {
@@ -319,10 +319,21 @@ section.vetement, section.sous-vetement, section.gant, section.chaussure, sectio
 
 /* Styles pour chaque catégorie (femme, homme, enfant) */
 section.femme, section.homme, section.enfant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Styles pour chaque catégorie (femme, homme, enfant) 
+section.femme, section.homme, section.enfant {
     flex: 1;
     max-width: 300px;
     text-align: center;
-}
+}*/
 
 /* Conteneur des articles */
 a.article {
