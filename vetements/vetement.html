@@ -16,8 +16,7 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
 </head>
 
-<bodyc class="page-vetement">
-
+<body>
 
     <nav class="menu-info">
         <ul class="right-info">
@@ -28,7 +27,7 @@
 
     <nav class="menu">
         <!-- Menu principal contenant les trois sections : gauche (logo), centre (catégories), droite (panier et à propos) -->
-        
+
         <ul class="left">
             <!-- Section gauche : logo -->
             <li>
@@ -62,104 +61,121 @@
         </ul>
     </nav>
 
-    <section class="article-vetements">
-        <!-- Section principale des vêtements avec une galerie d'articles pour chaque catégorie -->
-        
-        <section class="vetement">
-            
-            <section class="femme">
-                <!-- Vêtements pour femmes -->
+    <main>
+        <aside class="filters">
+            <!-- Radios pour filtrage -->
+            <input type="radio" name="category" id="tout" checked>
+            <label for="tout">Tout</label>
+
+            <input type="radio" name="category" id="vetements">
+            <label for="vetements">Vêtements</label>
+
+            <input type="radio" name="category" id="sous-vetements">
+            <label for="sous-vetements">Sous-vêtements</label>
+
+            <input type="radio" name="category" id="gants">
+            <label for="gants">Gants</label>
+
+            <input type="radio" name="category" id="chaussures">
+            <label for="chaussures">Chaussures</label>
+
+            <input type="radio" name="category" id="lunettes">
+            <label for="lunettes">Lunettes</label>
+        </aside>
+
+        <section class="articles">
+
+            <section class="vetements">
+
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementFemme/blousonSki.webp" alt="Blouson Ski Femme" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/blousonSki.webp" alt="Blouson Ski Femme"
+                        loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Femme</p>
                         <p class="price">129,99 €</p>
                     </div>
                 </a>
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp" alt="Pantalon Ski Femme" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
+                        alt="Pantalon Ski Femme" loading="lazy">
                     <div class="details">
                         <p class="name">Pantalon Ski Femme</p>
                         <p class="price">89,99 €</p>
                     </div>
                 </a>
-            </section>
 
-            <section class="homme">
-                <!-- Vêtements pour hommes -->
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementHomme/blousonSkiDevant.webp" alt="Blouson Ski Homme" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementHomme/blousonSkiDevant.webp"
+                        alt="Blouson Ski Homme" loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Homme</p>
                         <p class="price">139,99 €</p>
                     </div>
                 </a>
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementHomme/basSki.webp" alt="Pantalon Ski Homme" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementHomme/basSki.webp" alt="Pantalon Ski Homme"
+                        loading="lazy">
                     <div class="details">
                         <p class="name">Pantalon Ski Homme</p>
                         <p class="price">99,99 €</p>
                     </div>
                 </a>
-            </section>
 
-            <section class="enfant">
-                <!-- Vêtements pour enfants -->
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp" alt="Blouson Ski Enfant" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp"
+                        alt="Blouson Ski Enfant" loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Enfant</p>
                         <p class="price">79,99 €</p>
                     </div>
                 </a>
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp" alt="Pantalon Ski Enfant" loading="lazy">
+                    <img src="../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp"
+                        alt="Pantalon Ski Enfant" loading="lazy">
                     <div class="details">
                         <p class="name">Pantalon Ski Enfant</p>
                         <p class="price">69,99 €</p>
                     </div>
                 </a>
+
             </section>
 
-        </section>
-    </section>
+            <section class="sous-vetements">
 
-    <section class="article-ssvetement">
-
-        <section class="sous-vetement">
-
-            <section class="femme">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/sousVetements/sousVetementF/tshirt.webp" alt="Article Image 1"
                         loading="lazy">
-                        <div class="details">
-                            <p class="name">T-shirt Thermique Femme</p>
-                            <p class="price">29,99 €</p>
-                        </div>
+                    <div class="details">
+                        <p class="name">T-shirt Thermique Femme</p>
+                        <p class="price">29,99 €</p>
+                    </div>
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/sousVetements/sousVetementF/legging.webp" alt="Article Image 2"
                         loading="lazy">
-                        <div class="details">
-                            <p class="name">Legging Thermique Femme</p>
-                            <p class="price">34,99 €</p>
-                        </div>
+                    <div class="details">
+                        <p class="name">Legging Thermique Femme</p>
+                        <p class="price">34,99 €</p>
+                    </div>
                 </a>
-            </section>
 
-            <section class="homme">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/sousVetements/sousVetementH/tshirt.webp" alt="Article Image 3"
                         loading="lazy">
-                        
+                    <div class="details">
+                        <p class="name">T-shirt Thermique Homme</p>
+                        <p class="price">29,99 €</p>
+                    </div>
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/sousVetements/sousVetementH/legging.webp" alt="Article Image 3"
                         loading="lazy">
+                    <div class="details">
+                        <p class="name">Legging Thermique Homme</p>
+                        <p class="price">34,99 €</p>
+                    </div>
                 </a>
-            </section>
 
-            <section class="enfant">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/sousVetements/sousVetementE/sousVEnfants.webp"
                         alt="Article Image 3" loading="lazy">
@@ -168,19 +184,12 @@
                     <img src="../images/OngletVetements/sousVetements/sousVetementE/sousVE.webp" alt="Article Image 3"
                         loading="lazy">
                 </a>
+
             </section>
 
-        </section>
 
-    </section>
+            <section class="gants">
 
-    </section>
-
-    <section class="article-gant">
-
-        <section class="gant">
-
-            <section class="femme">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/gants/gantsF.png" alt="Article Image 1" loading="lazy">
                     <div class="details">
@@ -195,43 +204,41 @@
                         <p class="price">24,99 €</p>
                     </div>
                 </a>
-            </section>
 
-            <section class="homme">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/gants/gants.webp" alt="Article Image 3" loading="lazy">
-                    
+                    <div class="details">
+                        <p class="name">Gants Ski Homme</p>
+                        <p class="price">19,99 €</p>
+                    </div>
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/gants/gants1.webp" alt="Article Image 3" loading="lazy">
+                    <div class="details">
+                        <p class="name">Gants Hiver Homme</p>
+                        <p class="price">24,99 €</p>
+                    </div>
                 </a>
-            </section>
 
-            <section class="enfant">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/gants/gantsE.webp" alt="Article Image 3" loading="lazy">
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/gants/gantsE2.webp" alt="Article Image 3" loading="lazy">
                 </a>
+
             </section>
 
-        </section>
 
-    </section>
 
-    <section class="article-chaussure">
-
-        <section class="chaussure">
-
-            <section class="femme">
+            <section class="chaussures">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/chaussure/chaussureApresSkiF.webp" alt="Article Image 1"
                         loading="lazy">
-                        <div class="details">
-                            <p class="name">Chaussure Après-Ski Femme</p>
-                            <p class="price">79,99 €</p>
-                        </div>
+                    <div class="details">
+                        <p class="name">Chaussure Après-Ski Femme</p>
+                        <p class="price">79,99 €</p>
+                    </div>
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/chaussure/chaussureF.webp" alt="Article Image 2" loading="lazy">
@@ -240,19 +247,23 @@
                         <p class="price">99,99 €</p>
                     </div>
                 </a>
-            </section>
 
-            <section class="homme">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/chaussure/chaussureapresSkiH.webp" alt="Article Image 3"
                         loading="lazy">
+                    <div class="details">
+                        <p class="name">Chaussure Après-Ski Homme</p>
+                        <p class="price">79,99 €</p>
+                    </div>
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/chaussure/chaussureH.webp" alt="Article Image 3" loading="lazy">
+                    <div class="details">
+                        <p class="name">Chaussure de Ski Homme</p>
+                        <p class="price">99,99 €</p>
+                    </div>
                 </a>
-            </section>
 
-            <section class="enfant">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/chaussure/chaussureApresSkiE.webp" alt="Article Image 3"
                         loading="lazy">
@@ -260,17 +271,12 @@
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/chaussure/chaussureE.webp" alt="Article Image 3" loading="lazy">
                 </a>
+
             </section>
 
-        </section>
 
-    </section>
+            <section class="lunettes">
 
-    <section class="article-lunette">
-
-        <section class="lunette">
-
-            <section class="femme">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/lunettes/lunetteSki.webp" alt="Article Image 1" loading="lazy">
                     <div class="details">
@@ -281,24 +287,28 @@
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/lunettes/lunetteSoleil.webp" alt="Article Image 2"
                         loading="lazy">
-                        <div class="details">
-                            <p class="name">Lunette de Soleil Femme</p>
-                            <p class="price">49,99 €</p>
-                        </div>
+                    <div class="details">
+                        <p class="name">Lunette de Soleil Femme</p>
+                        <p class="price">49,99 €</p>
+                    </div>
                 </a>
-            </section>
 
-            <section class="homme">
                 <a href="#" class="article">
-                    <img src="../images/OngletVetements/lunettes/lunetteH.png" alt="Article Image 3" loading="lazy">
+                    <img src="../images/OngletVetements/lunettes/lunetteH.webp" alt="Article Image 3" loading="lazy">
+                    <div class="details">
+                        <p class="name">Lunette de Ski Homme</p>
+                        <p class="price">59,99 €</p>
+                    </div>
                 </a>
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/lunettes/lunetteSoleil1.webp" alt="Article Image 3"
                         loading="lazy">
+                    <div class="details">
+                        <p class="name">Lunette de Soleil Homme</p>
+                        <p class="price">49,99 €</p>
+                    </div>
                 </a>
-            </section>
 
-            <section class="enfant">
                 <a href="#" class="article">
                     <img src="../images/OngletVetements/lunettes/lunetteSkiE.webp" alt="Article Image 3" loading="lazy">
                 </a>
@@ -306,12 +316,11 @@
                     <img src="../images/OngletVetements/lunettes/masque de ski.webp" alt="Article Image 3"
                         loading="lazy">
                 </a>
-            </section>
 
+            </section>
         </section>
 
-    </section>
-
+    </main>
 
 </body>
 

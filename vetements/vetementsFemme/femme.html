@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/style_ssmenu.css">
+
     <title>MMI Sports de glisse</title>
     <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
 </head>
@@ -59,14 +59,36 @@
         </ul>
     </nav>
 
-    <!-- Section principale des vêtements pour femmes -->
-    <section class="article-vetements">
-        <section class="vetement">
-            <section class="femme">
-                <!-- Vêtements pour femmes -->
+    <main>
+
+        <aside class="filters">
+            <!-- Radios pour filtrage -->
+            <input type="radio" name="category" id="tout" checked>
+            <label for="tout">Tout</label>
+
+            <input type="radio" name="category" id="vetements">
+            <label for="vetements">Vêtements</label>
+
+            <input type="radio" name="category" id="sous-vetements">
+            <label for="sous-vetements">Sous-vêtements</label>
+
+            <input type="radio" name="category" id="gants">
+            <label for="gants">Gants</label>
+
+            <input type="radio" name="category" id="chaussures">
+            <label for="chaussures">Chaussures</label>
+
+            <input type="radio" name="category" id="lunettes">
+            <label for="lunettes">Lunettes</label>
+        </aside>
+
+
+        <!-- Section principale des vêtements pour femmes -->
+        <section class="articles">
+            <section class="vetements">
                 <a href="#" class="article">
-                    <img src="../../images/OngletVetements/vetements/vetementFemme/blousonSki.webp" alt="Blouson Ski Femme"
-                        loading="lazy">
+                    <img src="../../images/OngletVetements/vetements/vetementFemme/blousonSki.webp"
+                        alt="Blouson Ski Femme" loading="lazy">
                     <div class="details">
                         <p class="name">Blouson Ski Femme</p>
                         <p class="price">129,99 €</p>
@@ -81,13 +103,11 @@
                     </div>
                 </a>
             </section>
-        </section>
-    </section>
 
-    <!-- Section des sous-vêtements pour femmes -->
-    <section class="article-ssvetement">
-        <section class="sous-vetement">
-            <section class="femme">
+
+            <!-- Section des sous-vêtements pour femmes -->
+
+            <section class="sous-vetements">
                 <a href="#" class="article">
                     <img src="../../images/OngletVetements/sousVetements/sousVetementF/tshirt.webp" alt="T-shirt Femme"
                         loading="lazy">
@@ -105,13 +125,11 @@
                     </div>
                 </a>
             </section>
-        </section>
-    </section>
 
-    <!-- Section des gants pour femmes -->
-    <section class="article-gant">
-        <section class="gant">
-            <section class="femme">
+
+            <!-- Section des gants pour femmes -->
+
+            <section class="gants">
                 <a href="#" class="article">
                     <img src="../../images/OngletVetements/gants/gantsF.png" alt="Gants Femme" loading="lazy">
                     <div class="details">
@@ -127,13 +145,9 @@
                     </div>
                 </a>
             </section>
-        </section>
-    </section>
 
-    <!-- Section des chaussures pour femmes -->
-    <section class="article-chaussure">
-        <section class="chaussure">
-            <section class="femme">
+            <!-- Section des chaussures pour femmes -->
+            <section class="chaussures">
                 <a href="#" class="article">
                     <img src="../../images/OngletVetements/chaussure/chaussureApresSkiF.webp"
                         alt="Chaussure Après-Ski Femme" loading="lazy">
@@ -151,13 +165,9 @@
                     </div>
                 </a>
             </section>
-        </section>
-    </section>
 
-    <!-- Section des lunettes pour femmes -->
-    <section class="article-lunette">
-        <section class="lunette">
-            <section class="femme">
+            <!-- Section des lunettes pour femmes -->
+            <section class="lunettes">
                 <a href="#" class="article">
                     <img src="../../images/OngletVetements/lunettes/lunetteSki.webp" alt="Lunette de Ski Femme"
                         loading="lazy">
@@ -176,8 +186,8 @@
                 </a>
             </section>
         </section>
-    </section>
 
+    </main>
 </body>
 
 </html>
