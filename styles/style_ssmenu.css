@@ -33,11 +33,55 @@
     font-size: 10px;
 }
 
+.menu label,
+#toggle {
+    display: none;
+}
+
+/* Navigation */
+nav {
+    background-color: #12233b;
+    padding: 10px;
+    position: relative;
+}
+
+/* Conteneur principal */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    height:30px;
+    width: auto;
+}
+
+/* Icône de bascule ("☰") */
+.toggle {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Cacher par défaut sur grand écran */
+}
+
+
+
 /* Style de la navigation principale */
 .menu {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     padding: 10px 0;
     background-color: #12233b;
@@ -93,11 +137,6 @@
     color: #3f7acb;
 }
 
-/* Logo */
-.menu .logo {
-    width: 30px;
-}
-
 /* Style de la navigation secondaire */
 .sous-menu {
     display: flex;
@@ -139,11 +178,15 @@ input[type="radio"] {
 }
 
 main {
-    display: grid; /* Active CSS Grid */
-    grid-template-columns: 300px 1fr; /* 300px pour les filtres, le reste pour les articles */
-    gap: 20px; /* Espacement entre les colonnes */
+    display: grid;
+    /* Active CSS Grid */
+    grid-template-columns: 300px 1fr;
+    /* 300px pour les filtres, le reste pour les articles */
+    gap: 20px;
+    /* Espacement entre les colonnes */
     margin: 20px;
 }
+
 
 /* Masquer tout sauf la catégorie sélectionnée */
 body:has(#vetements:checked) .sous-vetements,
@@ -151,15 +194,15 @@ body:has(#vetements:checked) .gants,
 body:has(#vetements:checked) .chaussures,
 body:has(#vetements:checked) .lunettes {
     display: none;
-    color:#673b8d;
+    color: #673b8d;
 }
 
 body:has(#sous-vetements:checked) .vetements,
-body:has(#sous-vetements:checked) .gants,
-body:has(#sous-vetements:checked) .chaussures,
-body:has(#sous-vetements:checked) .lunettes {
+.gants,
+.chaussures,
+.lunettes {
     display: none;
-    color:#673b8d;
+    color: #673b8d;
 }
 
 body:has(#gants:checked) .vetements,
@@ -167,7 +210,7 @@ body:has(#gants:checked) .sous-vetements,
 body:has(#gants:checked) .chaussures,
 body:has(#gants:checked) .lunettes {
     display: none;
-    color:#673b8d;
+    color: #673b8d;
 }
 
 body:has(#chaussures:checked) .vetements,
@@ -175,7 +218,7 @@ body:has(#chaussures:checked) .sous-vetements,
 body:has(#chaussures:checked) .gants,
 body:has(#chaussures:checked) .lunettes {
     display: none;
-    color:#673b8d;
+    color: #673b8d;
 }
 
 body:has(#lunettes:checked) .vetements,
@@ -183,22 +226,29 @@ body:has(#lunettes:checked) .sous-vetements,
 body:has(#lunettes:checked) .gants,
 body:has(#lunettes:checked) .chaussures {
     display: none;
-    color:#673b8d;
+    color: #673b8d;
 }
 
 .filters {
 
-    padding: 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
-    display: flex; /* Flexbox pour un alignement vertical */
-    flex-direction: column; /* Aligne les éléments verticalement */
-    gap: 15px; /* Espacement entre les options */
+    padding: 20px;
+    /* Espacement interne */
+    border-radius: 10px;
+    /* Coins arrondis */
+    display: flex;
+    /* Flexbox pour un alignement vertical */
+    flex-direction: column;
+    /* Aligne les éléments verticalement */
+    gap: 15px;
+    /* Espacement entre les options */
 }
 
 .filters label {
-    font-size: 14px; /* Taille de police des étiquettes */
-    color: #333; /* Couleur du texte */
-    font-family:"Rowdies", sans-serif ;
+    font-size: 14px;
+    /* Taille de police des étiquettes */
+    color: #333;
+    /* Couleur du texte */
+    font-family: "Rowdies", sans-serif;
     padding: 10px 5px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -207,12 +257,13 @@ body:has(#lunettes:checked) .chaussures {
 }
 
 .filters input[type="radio"] {
-    margin-right: 10px; /* Espacement entre la radio et le texte */
+    margin-right: 10px;
+    /* Espacement entre la radio et le texte */
 
 }
 
 .filters label:hover {
-    color:#673b8d;
+    color: #673b8d;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -234,16 +285,21 @@ section.lunettes {
 }
 
 .articles {
-    display: grid; /* Active CSS Grid pour les articles */
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les catégories */
-    gap: 10px; /* Espacement entre les sections */
+    display: grid;
+    /* Active CSS Grid pour les articles */
+    grid-template-columns: repeat(2, 1fr);
+    /* Deux colonnes pour les catégories */
+    gap: 10px;
+    /* Espacement entre les sections */
 }
 
 /* Section individuelle (ex. vêtements, sous-vêtements, etc.) */
-.articles > section {
+.articles>section {
 
-    padding: 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
+    padding: 20px;
+    /* Espacement interne */
+    border-radius: 10px;
+    /* Coins arrondis */
 
 }
 
@@ -254,7 +310,8 @@ section.lunettes {
     padding: 15px;
     margin-bottom: 15px;
     margin-right: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre légère */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -299,7 +356,7 @@ a.article {
 
 .article .details .name {
     font-size: 16px;
-    font-family:"Rowdies", sans-serif ;
+    font-family: "Rowdies", sans-serif;
     font-weight: bold;
     color: #333;
     margin: 0;
@@ -307,22 +364,181 @@ a.article {
 
 .article .details .price {
     font-size: 14px;
-    font-family:"Rowdies", sans-serif ;
+    font-family: "Rowdies", sans-serif;
     color: #777;
     margin: 5px 0 0 0;
 }
 
-/* Responsivité */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    main {
+        grid-template-columns: 1fr;
+        /* Une seule colonne */
+    }
+
+    .articles {
+        grid-template-columns: repeat(1, 1fr);
+        /* Une seule colonne pour les articles */
+        gap: 15px;
+    }
+
+    .filters {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .filters label {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+
     .article {
-        flex: 1 1 calc(50% - 20px); /* Deux articles par ligne */
-        max-width: calc(50% - 20px);
+        margin-bottom: 10px;
+    }
+
+    .article .details .name {
+        font-size: 14px;
+    }
+
+    .article .details .price {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .article {
-        flex: 1 1 100%; /* Un article par ligne */
+    .toggle {
+        display: block; /* Affiche l'icône de bascule */
+    }
+
+    .menu {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #12233b;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    #toggle:checked ~ .menu {
+        display: flex; /* Affiche le menu si l'input est coché */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .menu a {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: left;
+        border-bottom: 1px solid #3f7acb;
+    }
+
+    .menu a:hover {
+        background-color: #3f7acb;
+    }
+    /* Conteneur principal */
+    main {
+        grid-template-columns: 1fr;
+        /* Une seule colonne */
+        padding: 10px;
+        gap: 10px;
         max-width: 100%;
+        /* Évite tout débordement horizontal */
+        overflow: hidden;
+    }
+
+    /* Filtres */
+    .filters {
+        padding: 10px;
+        gap: 8px;
+        border-radius: 5px;
+        max-width: 100%;
+        /* Limite la largeur */
+        overflow: hidden;
+    }
+
+    .filters label {
+        font-size: 10px;
+        padding: 6px 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        max-width: 100%;
+        /* Évite tout débordement horizontal */
+        text-overflow: ellipsis;
+        /* Coupe le texte s'il est trop long */
+        white-space: nowrap;
+        /* Empêche les retours à la ligne non souhaités */
+        overflow: hidden;
+        /* Évite les débordements */
+    }
+
+    /* Articles */
+    .articles {
+        grid-template-columns: 1fr;
+        /* Une seule colonne */
+        gap: 10px;
+        max-width: 100%;
+        /* Limite la largeur */
+    }
+
+    .article {
+        margin-bottom: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        max-width: 100%;
+        /* Limite la largeur */
+        overflow: hidden;
+        /* Évite les débordements de contenu */
+    }
+
+    .article img {
+        width: 100%;
+        /* Image s'adapte au conteneur */
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        object-fit: cover;
+        /* Préserve le ratio sans déborder */
+    }
+
+    .article .details .name,
+    .article .details .price {
+        max-width: 100%;
+        /* Limite la largeur */
+        text-overflow: ellipsis;
+        /* Coupe le texte s'il dépasse */
+        white-space: nowrap;
+        /* Empêche les retours à la ligne non souhaités */
+        overflow: hidden;
+    }
+
+    /* Filtres - Radio Buttons */
+    .filters input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    /* Conteneurs spécifiques */
+    section.vetements,
+    section.sous-vetements,
+    section.gants,
+    section.chaussures,
+    section.lunettes {
+        max-width: 100%;
+        /* Limite la largeur */
+        overflow: hidden;
+        /* Évite les débordements */
+        margin: 0 auto;
+        padding: 10px;
     }
 }
