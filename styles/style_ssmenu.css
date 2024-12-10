@@ -52,6 +52,20 @@ nav {
     align-items: center;
 }
 
+.nav-content span {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Couleur au survol */
+.nav-content span:hover {
+    color: #3f7acb;
+}
 /* Logo */
 .logo-container {
     display: flex;
@@ -136,6 +150,7 @@ nav {
 .menu li a:hover {
     color: #3f7acb;
 }
+
 
 /* Style de la navigation secondaire */
 .sous-menu {
