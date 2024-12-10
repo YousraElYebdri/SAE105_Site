@@ -187,18 +187,12 @@ nav {
     color: #12233b;
 }
 
-/* Masquer les radios */
-input[type="radio"] {
-    display: none;
-}
+
 
 main {
     display: grid;
-    /* Active CSS Grid */
     grid-template-columns: 300px 1fr;
-    /* 300px pour les filtres, le reste pour les articles */
     gap: 20px;
-    /* Espacement entre les colonnes */
     margin: 20px;
 }
 
@@ -213,9 +207,9 @@ body:has(#vetements:checked) .lunettes {
 }
 
 body:has(#sous-vetements:checked) .vetements,
-.gants,
-.chaussures,
-.lunettes {
+body:has(#sous-vetements:checked) .gants,
+body:has(#sous-vetements:checked) .chaussures,
+body:has(#sous-vetements:checked) .lunettes {
     display: none;
     color: #673b8d;
 }
@@ -244,6 +238,8 @@ body:has(#lunettes:checked) .chaussures {
     color: #673b8d;
 }
 
+
+
 .filters {
 
     padding: 20px;
@@ -260,9 +256,7 @@ body:has(#lunettes:checked) .chaussures {
 
 .filters label {
     font-size: 14px;
-    /* Taille de police des étiquettes */
     color: #333;
-    /* Couleur du texte */
     font-family: "Rowdies", sans-serif;
     padding: 10px 5px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -271,10 +265,9 @@ body:has(#lunettes:checked) .chaussures {
 
 }
 
-.filters input[type="radio"] {
-    margin-right: 10px;
-    /* Espacement entre la radio et le texte */
-
+/* Masquer les radios */
+input[type="radio"] {
+    display: none;
 }
 
 .filters label:hover {
@@ -312,9 +305,7 @@ section.lunettes {
 .articles>section {
 
     padding: 20px;
-    /* Espacement interne */
     border-radius: 10px;
-    /* Coins arrondis */
 
 }
 
@@ -326,7 +317,6 @@ section.lunettes {
     margin-bottom: 15px;
     margin-right: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre légère */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }

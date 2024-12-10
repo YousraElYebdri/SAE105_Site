@@ -1,10 +1,8 @@
-/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 /* Style pour menu-info */
 .menu-info {
@@ -12,7 +10,7 @@
     justify-content: flex-end;
     align-items: center;
     background-color: #673b8d;
-    padding: 2px 0;
+    padding: 2px 0; /* Très petit padding vertical pour réduire la hauteur */
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -20,22 +18,22 @@
 .menu-info .right-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Espace horizontal entre les éléments */
     list-style: none;
 }
 
 .menu-info .right-info li {
-    margin: 0;
-    padding: 0 30px;
+    margin: 0; /* Suppression des marges */
+    padding: 0 30px; /* Suppression des paddings */
 }
 
 .menu-info .right-info li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 8px; /* Taille inchangée */
+    
 }
-
-/* Style de la navigation principale */
+/* Style de la navigation */
 .menu {
     display: flex;
     align-items: center;
@@ -56,25 +54,19 @@
 
 /* Partie gauche (logo et nom) */
 .menu .left {
-    display: flex;
-    align-items: center;
     gap: 10px;
     padding-left: 20px;
 }
 
 /* Partie centrale */
 .menu .center {
-    display: flex;
-    align-items: center;
     gap: 40px;
     flex-grow: 1;
     justify-content: center;
 }
 
-/* Partie droite */
+/* Partie droite (panier) */
 .menu .right {
-    display: flex;
-    align-items: center;
     gap: 20px;
     padding-right: 20px;
 }
@@ -87,40 +79,62 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+.menu .right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+.menu .right li a i {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease; /* Transition de couleur */
 }
 
-/* Couleur au survol */
+/* Couleur de survol */
 .menu li a:hover {
-    color: #3f7acb;
+    color: #3f7acb; /* Couleur au survol */
+}
+.menu li a i:hover {
+    color: #3f7acb; /* Couleur au survol */
 }
 
 /* Logo */
 .menu .logo {
     width: 30px;
+    max-width: 100%;
 }
 
-/* Style de la navigation secondaire */
+/* Style de la navigation */
 .sous-menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     background-color: #3f7acb;
 }
 
-/* Listes dans le sous-menu */
+/* Style des listes dans chaque section */
 .sous-menu ul {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px;
 }
 
-/* Style des liens dans le sous-menu */
+/* Partie centrale */
+.sous-menu .center {
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Style des liens */
 .sous-menu li a {
     color: #ffffff;
     text-decoration: none;
@@ -128,344 +142,221 @@
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transition de couleur */
 }
-
+/* Couleur de survol */
 .sous-menu li a:hover {
-    color: #12233b;
+    color: #3f7acb; /* Couleur au survol */
 }
 
+main {
+    display: grid; /* Active la grille */
+    grid-template-columns: 300px 1fr; /* Définit deux colonnes */
+    gap: 20px; /* Espacement entre les colonnes */
+    margin: 0; /* Supprime les marges externes */
+    padding: 20px; /* Ajoute un espace interne */
+    width: 100%; /* Occupe toute la largeur */
+    max-width: 1200px; /* Largeur maximale si nécessaire */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
 
-/* Je définis le style du bandeau principal */
-#bandeau {
-    background-image: url("../images/bandeau.jpeg");
-    background-size: cover;
-    background-position: center;
-    padding: 200px 0;
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Masquer tout sauf la catégorie sélectionnée */
+body:has(#vetements:checked) .sous-vetements,
+body:has(#vetements:checked) .gants,
+body:has(#vetements:checked) .chaussures,
+body:has(#vetements:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#sous-vetements:checked) .vetements,
+body:has(#sous-vetements:checked) .gants,
+body:has(#sous-vetements:checked) .chaussures,
+body:has(#sous-vetements:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#gants:checked) .vetements,
+body:has(#gants:checked) .sous-vetements,
+body:has(#gants:checked) .chaussures,
+body:has(#gants:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#chaussures:checked) .vetements,
+body:has(#chaussures:checked) .sous-vetements,
+body:has(#chaussures:checked) .gants,
+body:has(#chaussures:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#lunettes:checked) .vetements,
+body:has(#lunettes:checked) .sous-vetements,
+body:has(#lunettes:checked) .gants,
+body:has(#lunettes:checked) .chaussures {
+    display: none;
+    color:#673b8d;
+}
+
+.filters {
+
+    padding: 20px;
+    /* Espacement interne */
+    border-radius: 10px;
+    /* Coins arrondis */
     display: flex;
+    /* Flexbox pour un alignement vertical */
     flex-direction: column;
+    /* Aligne les éléments verticalement */
+    gap: 15px;
+    /* Espacement entre les options */
+}
+
+.filters label {
+    font-size: 14px;
+    color: #333;
+    font-family: "Rowdies", sans-serif;
+    padding: 10px 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+/* Masquer les radios */
+input[type="radio"] {
+    display: none;
+}
+
+.filters label:hover {
+    color: #673b8d;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Styles pour les sections spécifiques */
+section.vetements,
+section.sous-vetements,
+section.gants,
+section.chaussures,
+section.lunettes {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 55vh;
-    margin: 0;
 }
 
-#bandeau div {
-    padding: 0px 20px;
-    /* Je limite le padding pour éviter les débordements horizontaux */
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    height: 75px;
-    width: 100%;
-    max-width: 1000px;
-}
-
-#bandeau h1 {
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #000000b9;
-    font-family: "Rowdies", sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 20px 2px;
-    line-height: 40px;
-}
-
-#bandeau .btn {
-    background-color: #12233b;
-    color: #ffffff;
-    border: 2px solid #12233b;
-    border-radius: 7px;
-    font-family: "Rowdies", sans-serif;
-    font-size: 13px;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 18px 30px;
-    margin: 20px 0;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    /* Transition de couleur uniquement */
-}
-
-#bandeau .btn:hover {
-    background-color: #12233b45;
-    border: 2px solid #12233b;
-    color: #12233b;
-    padding: 18px 30px;
-    /* Padding reste constant pour éviter l'agrandissement */
-}
-
-.article-galerie {
+.articles {
     display: grid;
     /* Active CSS Grid pour les articles */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Colonnes flexibles */
-    gap: 20px;
-    /* Espacement entre les articles */
-    justify-content: center;
-    /* Centre la grille horizontalement */
+    grid-template-columns: repeat(2, 1fr);
+    /* Deux colonnes pour les catégories */
+    gap: 10px;
+    /* Espacement entre les sections */
+}
+
+/* Section individuelle (ex. vêtements, sous-vêtements, etc.) */
+.articles>section {
+
     padding: 20px;
+    border-radius: 10px;
+
 }
 
-/* Style pour les articles de la galerie */
+/* Articles individuels */
 .article {
-    position: relative;
-    width: 100%;
-    /* Adapte la largeur à la colonne */
-    height: 250px;
-    /* Hauteur fixe */
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-    /* Transition d'ombre seulement */
-    text-decoration: none;
-}
-
-/* Ajout d'une ombre plus grande au survol */
-.article:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    /* Ombre plus grande sans agrandissement */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .article img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Adapte l'image sans déformer */
-    transition: transform 0.3s ease;
-    /* Transition fluide pour un effet de zoom */
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Légère mise en avant de l'image au survol */
-.article:hover img {
-    transform: scale(1.05);
-}
-
-/* Texte centré avec un fond semi-transparent */
-.text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    background-color: rgba(103, 59, 141, 0.4);
-    /* Couleur semi-transparente */
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Rowdies", sans-serif;
-    transition: opacity 0.3s ease;
-}
-
-/* Disparition du texte au survol */
-.article:hover .text {
-    opacity: 0;
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-    .article-galerie {
-        grid-template-columns: repeat(2, 1fr);
-        /* Deux articles par ligne */
-    }
-}
-
-@media (max-width: 480px) {
-    .article-galerie {
-        grid-template-columns: repeat(1, 1fr);
-        /* Un article par ligne */
-    }
-}
-
-/* Je définis le style pour le séparateur horizontal */
-hr {
-    display: block;
-    width: 100%;
-    /* Je m'assure que le <hr> prend toute la largeur disponible */
-    color: #12233b;
-    border: 3px solid #12233b;
-    margin: 0;
-    clear: both;
-}
-
-/* Je configure la section sportHiver */
-#sportHiver {
-    padding: 0;
+/* Conteneur des articles */
+a.article {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    /* J'assure que la section utilise toute la largeur disponible */
-}
-
-#sportHiver div {
-    padding: 0px 10px;
-    /* Je limite le padding pour éviter les débordements */
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    height: auto;
-    width: 100%;
-    max-width: 1250px;
-}
-
-#sportHiver h2 {
-    color: #673b8d;
-    font-family: "Rowdies", sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 20px 0px;
-    line-height: 40px;
-}
-
-#sportHiver p {
-    font-family: "Rowdies", sans-serif;
-    color: #12233b;
-    font-size: 15px;
-    text-align: center;
-    margin: 10px 0 30px;
-
-}
-
-/* Alignement du bouton à gauche */
-.btn-container {
-    display: flex;
-    justify-content: center;
-}
-
-/* Style pour le bouton sans effet de redimensionnement */
-#sportHiver .btn {
-    background-color: #673b8d;
-    color: #ffffff;
-    border: 2px solid #673b8d;
-    border-radius: 7px;
-    font-family: "Rowdies", sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 25px 40px;
-    margin: 10px 0;
-    border: none;
-    cursor: pointer;
-    text-align: center;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article:hover img {
+    transform: scale(1.1);
+}
+
+.article .details .name {
+    font-size: 16px;
+    font-family: "Rowdies", sans-serif;
     font-weight: bold;
-    transition: color 0.3s ease;
-    /* Transition de couleur */
+    color: #333;
+    margin: 0;
 }
 
-#sportHiver .btn:hover {
-    background-color: #673b8d45;
-    border: 2px solid #673b8d;
-    color: #673b8d;
-    padding: 25px 40px;
-
-}
-
-footer {
-    background-color: #12233b;
-    color: #12233b;
-}
-
-/* Responsivité */
-@media (max-width: 1024px) {
-    .menu ul {
-        justify-content: center;
-        /* Centre les éléments du menu */
-        margin-bottom: 10px;
-    }
-
-    .menu ul li {
-        margin: 0 5px;
-    }
-
-    .sous-menu ul li a {
-        font-size: 10px;
-        /* Réduit la taille des liens */
-    }
-
-    .article-galerie {
-        grid-template-columns: repeat(2, 1fr);
-        /* Deux colonnes */
-    }
-
-    p {
-        font-size: 14px;
-        /* Réduit la taille du texte */
-    }
+.article .details .price {
+    font-size: 14px;
+    font-family: "Rowdies", sans-serif;
+    color: #777;
+    margin: 5px 0 0 0;
 }
 
 @media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        /* Passe en colonne */
-        align-items: center;
+    .layout {
+        flex-direction: column; /* Filtres au-dessus des articles */
     }
 
-    .menu ul {
-        justify-content: center;
-    }
-
-    .article-galerie {
-        grid-template-columns: repeat(1, 1fr);
-        /* Une seule colonne */
-    }
-
-    #sportHiver h2 {
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    #sportHiver p {
-        font-size: 12px;
-        /* Plus petit texte pour petits écrans */
-    }
-}
-
-@media (max-width: 480px) {
-
-    .menu ul.mobile {
-        display: none;
-        /* Menu mobile caché par défaut */
-    }
-
-    .menu ul li a {
-        font-size: 10px;
-        /* Encore plus petit sur très petits écrans */
-    }
-
-    .menu ul li {
-        margin: 0 5px;
-    }
-
-    .sous-menu ul li a {
-        font-size: 9px;
-    }
-
-    #sportHiver h2 {
-        font-size: 20px;
-        line-height: 20px;
-
-    }
-
-    #sportHiver p {
-        font-size: 14px;
+    .filters {
+        width: 100%; /* Les filtres occupent toute la largeur */
     }
 
     .article {
-        height: 200px;
-        /* Réduit la hauteur des articles */
+        width: calc(50% - 10px); /* Deux articles par ligne */
+    }
+}
+
+@media (max-width: 480px) {
+    .article {
+        width: 100%; /* Un article par ligne */
     }
 }
