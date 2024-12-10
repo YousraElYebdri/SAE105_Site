@@ -149,37 +149,6 @@
     color: #3f7acb; /* Couleur au survol */
 }
 
-/* Pour cacher les checkbox des menu cliquant */
-.sous-menu-check {
-    visibility: hidden;
-
-}
-
-body:has(#femme:checked) .enfant,
-body:has(#femme:checked) .homme {
-    display: none;
-}
-
-body:has(#homme:checked) .enfant,
-body:has(#homme:checked) .femme {
-    display: none;
-}
-body:has(#enfant:checked) .femme,
-body:has(#enfant:checked) .homme {
-    display: none;
-}
-
-
-main {
-    margin: 20px;
-    display: flex;
-    margin: 40px 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
 form {
     background-color: white;
     padding: 30px 500px;
@@ -299,41 +268,135 @@ form h2{
     box-shadow: 0 0 8px #12233b99;
 }
 
-/* Style général pour les sections 
-section.article-vetements, section.article-ssvetement, section.article-gant, section.article-chaussure, section.article-lunette {
+/* Masquer les radios */
+input[type="radio"] {
+    display: none;
+}
+
+main {
+    display: grid; /* Active CSS Grid */
+    grid-template-columns: 300px 1fr; /* 300px pour les filtres, le reste pour les articles */
+    gap: 20px; /* Espacement entre les colonnes */
+    margin: 20px;
+}
+
+/* Masquer tout sauf la catégorie sélectionnée */
+body:has(#vetements:checked) .sous-vetements,
+body:has(#vetements:checked) .gants,
+body:has(#vetements:checked) .chaussures,
+body:has(#vetements:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#sous-vetements:checked) .vetements,
+body:has(#sous-vetements:checked) .gants,
+body:has(#sous-vetements:checked) .chaussures,
+body:has(#sous-vetements:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#gants:checked) .vetements,
+body:has(#gants:checked) .sous-vetements,
+body:has(#gants:checked) .chaussures,
+body:has(#gants:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#chaussures:checked) .vetements,
+body:has(#chaussures:checked) .sous-vetements,
+body:has(#chaussures:checked) .gants,
+body:has(#chaussures:checked) .lunettes {
+    display: none;
+    color:#673b8d;
+}
+
+body:has(#lunettes:checked) .vetements,
+body:has(#lunettes:checked) .sous-vetements,
+body:has(#lunettes:checked) .gants,
+body:has(#lunettes:checked) .chaussures {
+    display: none;
+    color:#673b8d;
+}
+
+.filters {
+
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    display: flex; /* Flexbox pour un alignement vertical */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    gap: 15px; /* Espacement entre les options */
+}
+
+.filters label {
+    font-size: 14px; /* Taille de police des étiquettes */
+    color: #333; /* Couleur du texte */
+    font-family:"Rowdies", sans-serif ;
+    padding: 10px 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.filters input[type="radio"] {
+    margin-right: 10px; /* Espacement entre la radio et le texte */
+
+}
+
+.filters label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+}
+/* Styles pour les sections spécifiques */
+section.vetements,
+section.sous-vetements,
+section.gants,
+section.chaussures,
+section.lunettes {
     margin: 20px auto;
     padding: 20px;
     max-width: 1200px;
-    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles {
+    display: grid; /* Active CSS Grid pour les articles */
+    grid-template-columns: repeat(1, 1fr); /* Deux colonnes pour les catégories */
+    gap: 10px; /* Espacement entre les sections */
+}
+
+/* Section individuelle (ex. vêtements, sous-vêtements, etc.) */
+.articles > section {
+
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+
+}
+
+/* Articles individuels */
+.article {
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}*/
-
-/* Flexbox pour une disposition propre */
-section.vetement, section.sous-vetement, section.gant, section.chaussure, section.lunette {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Styles pour chaque catégorie (femme, homme, enfant) */
-section.femme, section.homme, section.enfant {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1200px;
-}
-
-/* Styles pour chaque catégorie (femme, homme, enfant) 
-section.femme, section.homme, section.enfant {
-    flex: 1;
-    max-width: 300px;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
     text-align: center;
-}*/
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
 /* Conteneur des articles */
 a.article {
@@ -341,70 +404,58 @@ a.article {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px auto;
-    width: 250px; /* Largeur fixe */
-    height: auto; /* Hauteur ajustée automatiquement */
+    width: 250px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
 }
 
-/* Images des articles */
-a.article img {
-    width: auto; /* Ajustement automatique en fonction du conteneur */
-    max-width: 100%; /* Limite la largeur maximale */
-    height: auto; /* Maintient les proportions */
-    max-height: 300px; /* Limite la hauteur maximale */
-    margin-bottom: 10px;
-    object-fit: contain; /* Conserve toute l'image sans recadrage */
+.article img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
     transition: transform 0.3s;
 }
 
-/* Effet au survol */
-a.article:hover {
+.article:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-a.article:hover img {
+.article:hover img {
     transform: scale(1.1);
 }
 
-
-/* Conteneur des détails (nom et prix) */
-.details {
-    text-align: center;
-}
-
-/* Style pour le nom */
-.details .name {
+.article .details .name {
     font-size: 16px;
+    font-family:"Rowdies", sans-serif ;
     font-weight: bold;
     color: #333;
     margin: 0;
 }
 
-/* Style pour le prix */
-.details .price {
+.article .details .price {
     font-size: 14px;
+    font-family:"Rowdies", sans-serif ;
     color: #777;
     margin: 5px 0 0 0;
-    text-decoration: none;
 }
 
-/* Responsive design pour mobiles */
+/* Responsivité */
 @media (max-width: 768px) {
-    a.article {
-        width: 100%;
-        max-width: 250px;
-        padding: 5px;
+    .article {
+        flex: 1 1 calc(50% - 20px); /* Deux articles par ligne */
+        max-width: calc(50% - 20px);
     }
+}
 
-    a.article img {
-        max-height: 200px; /* Limite la hauteur sur les petits écrans */
+@media (max-width: 480px) {
+    .article {
+        flex: 1 1 100%; /* Un article par ligne */
+        max-width: 100%;
     }
 }

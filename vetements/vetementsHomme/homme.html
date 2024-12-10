@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../../styles/style_ssmenu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/style.css">
     <title>MMI Sports de glisse</title>
-    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
 </head>
 
 <body>
@@ -24,31 +22,30 @@
         </ul>
     </nav>
 
-    <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
-        <ul class="left">
-            <li>
-                <a href="../../contact.html">
-                    <img src="../../images/favicon.png" alt="Logo" class="logo">
-                </a>
-            </li>
-            <li><a href="../../index.html">MMI SDG</a></li>
-        </ul>
-        
-        <!-- Partie centrale -->
-        <ul class="center">
-            <li><a href="../vetement.html">Vêtements</a></li>
-            <li><a href="../../accessoire/accessoire.html">Accessoire</a></li>
-            <li><a href="../../tutoriel.html">Tutoriel</a></li>
-            
-        </ul>    
 
-        <!-- Partie droite -->
-        <ul class="right">
-            <li><a href="../../panier.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="../../contact.html">À propos</a></li>
-        </ul>
+
+    <nav>
+        <div class="nav-content">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../images/favicon.png" alt="Logo" class="logo">
+                <span>MMI SDG</span>
+            </a>
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="toggle">☰</label>
+        </div>
+        <div class="menu">
+            <ul class="center">
+                <li><a href="../vetement.html">Vêtements</a></li>
+                <li><a href="../../accessoire/accessoire.html">Accessoire</a></li>
+                <li><a href="../../tutoriel.html">Tutoriel</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="../../panier.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a href="../../contact.html">À propos</a></li>
+            </ul>
+        </div>
     </nav>
+    
 
     <nav class="sous-menu">
         <!-- Menu secondaire avec des options de filtrage par catégorie (femme, homme, enfant) -->
@@ -58,6 +55,127 @@
             <li><a href="../vetementsEnfant/enfant.html">enfant</a></li>
         </ul>
     </nav>
+
+
+    <main>
+        <aside class="filters">
+            <!-- Radios pour filtrage -->
+            <input type="radio" name="category" id="tout" checked>
+            <label for="tout">Tout</label>
+
+            <input type="radio" name="category" id="vetements">
+            <label for="vetements">Vêtements</label>
+
+            <input type="radio" name="category" id="sous-vetements">
+            <label for="sous-vetements">Sous-vêtements</label>
+
+            <input type="radio" name="category" id="gants">
+            <label for="gants">Gants</label>
+
+            <input type="radio" name="category" id="chaussures">
+            <label for="chaussures">Chaussures</label>
+
+            <input type="radio" name="category" id="lunettes">
+            <label for="lunettes">Lunettes</label>
+        </aside>
+
+        <section class="articles">
+            <!-- Vêtements -->
+            <section class="vetements">
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/vetements/vetementHomme/blousonSkiDevant.webp"
+                        alt="Blouson Ski Homme">
+                    <div class="details">
+                        <p class="name">Blouson Ski Homme</p>
+                        <p class="price">139,99 €</p>
+                    </div>
+                </a>
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/vetements/vetementHomme/basSki.webp"
+                        alt="Pantalon Ski Homme">
+                    <div class="details">
+                        <p class="name">Pantalon Ski Homme</p>
+                        <p class="price">99,99 €</p>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Sous-vêtements -->
+            <section class="sous-vetements">
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/sousVetements/sousVetementH/tshirt.webp"
+                        alt="T-shirt Thermique Homme">
+                    <div class="details">
+                        <p class="name">T-shirt Thermique Homme</p>
+                        <p class="price">29,99 €</p>
+                    </div>
+                </a>
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/sousVetements/sousVetementH/legging.webp"
+                        alt="Legging Thermique Homme">
+                    <div class="details">
+                        <p class="name">Legging Thermique Homme</p>
+                        <p class="price">34,99 €</p>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Gants -->
+            <section class="gants">
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/gants/gants.webp" alt="Gants Ski Homme">
+                    <div class="details">
+                        <p class="name">Gants Ski Homme</p>
+                        <p class="price">19,99 €</p>
+                    </div>
+                </a>
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/gants/gants1.webp" alt="Gants Hiver Homme">
+                    <div class="details">
+                        <p class="name">Gants Hiver Homme</p>
+                        <p class="price">24,99 €</p>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Chaussures -->
+            <section class="chaussures">
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/chaussure/chaussureapresSkiH.webp"
+                        alt="Chaussure Après-Ski Homme">
+                    <div class="details">
+                        <p class="name">Chaussure Après-Ski Homme</p>
+                        <p class="price">79,99 €</p>
+                    </div>
+                </a>
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/chaussure/chaussureH.webp" alt="Chaussure de Ski Homme">
+                    <div class="details">
+                        <p class="name">Chaussure de Ski Homme</p>
+                        <p class="price">99,99 €</p>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Lunettes -->
+            <section class="lunettes">
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/lunettes/lunetteH.webp" alt="Lunette de Ski Homme">
+                    <div class="details">
+                        <p class="name">Lunette de Ski Homme</p>
+                        <p class="price">59,99 €</p>
+                    </div>
+                </a>
+                <a href="#" class="article">
+                    <img src="../../images/OngletVetements/lunettes/lunetteSoleil1.webp" alt="Lunette de Soleil Homme">
+                    <div class="details">
+                        <p class="name">Lunette de Soleil Homme</p>
+                        <p class="price">49,99 €</p>
+                    </div>
+                </a>
+            </section>
+        </section>
+    </main>
 
 </body>
 
