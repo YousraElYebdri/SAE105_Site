@@ -10,7 +10,7 @@
     justify-content: flex-end;
     align-items: center;
     background-color: #673b8d;
-    padding: 2px 0; /* Très petit padding vertical pour réduire la hauteur */
+    padding: 2px 0; /* TrÃ¨s petit padding vertical pour rÃ©duire la hauteur */
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -18,7 +18,7 @@
 .menu-info .right-info {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espace horizontal entre les éléments */
+    gap: 10px; /* Espace horizontal entre les Ã©lÃ©ments */
     list-style: none;
 }
 
@@ -30,7 +30,7 @@
 .menu-info .right-info li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 8px; /* Taille inchangée */
+    font-size: 8px; /* Taille inchangÃ©e */
     
 }
 /* Style de la navigation */
@@ -149,16 +149,6 @@
     color: #3f7acb; /* Couleur au survol */
 }
 
-main {
-    display: grid; /* Active la grille */
-    grid-template-columns: 300px 1fr; /* Définit deux colonnes */
-    gap: 20px; /* Espacement entre les colonnes */
-    margin: 0; /* Supprime les marges externes */
-    padding: 20px; /* Ajoute un espace interne */
-    width: 100%; /* Occupe toute la largeur */
-    max-width: 1200px; /* Largeur maximale si nécessaire */
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
-}
 
 main {
     display: grid;
@@ -167,7 +157,7 @@ main {
     margin: 20px;
 }
 
-/* Masquer tout sauf la catégorie sélectionnée */
+/* Masquer tout sauf la catÃ©gorie sÃ©lectionnÃ©e */
 body:has(#vetements:checked) .sous-vetements,
 body:has(#vetements:checked) .gants,
 body:has(#vetements:checked) .chaussures,
@@ -217,7 +207,7 @@ body:has(#lunettes:checked) .chaussures {
     display: flex;
     /* Flexbox pour un alignement vertical */
     flex-direction: column;
-    /* Aligne les éléments verticalement */
+    /* Aligne les Ã©lÃ©ments verticalement */
     gap: 15px;
     /* Espacement entre les options */
 }
@@ -244,7 +234,7 @@ input[type="radio"] {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Styles pour les sections spécifiques */
+/* Styles pour les sections spÃ©cifiques */
 section.vetements,
 section.sous-vetements,
 section.gants,
@@ -252,8 +242,8 @@ section.chaussures,
 section.lunettes {
     margin: 20px auto;
     padding: 20px;
-    max-width: 1200px;
     display: flex;
+    max-width: 1300px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -261,14 +251,11 @@ section.lunettes {
 
 .articles {
     display: grid;
-    /* Active CSS Grid pour les articles */
-    grid-template-columns: repeat(2, 1fr);
-    /* Deux colonnes pour les catégories */
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
-    /* Espacement entre les sections */
 }
 
-/* Section individuelle (ex. vêtements, sous-vêtements, etc.) */
+/* Section individuelle (ex. vÃªtements, sous-vÃªtements, etc.) */
 .articles>section {
 
     padding: 20px;
