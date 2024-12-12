@@ -50,6 +50,39 @@
         </ul>
     </nav>
 
+    <nav class="sous-menu">
+        <!-- Menu secondaire avec des options de filtrage par catégorie (femme, homme, enfant) -->
+        <ul class="center">
+            <li><a href="enfant.html">femme</a></li>
+            <li><a href="../vetementsHomme/homme.html">homme</a></li>
+            <li><a href="../vetementsFemme/femme.html">enfant</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <aside class="filters">
+            <!-- Radios pour filtrage -->
+            <input type="radio" name="category" id="tout" checked>
+            <label for="tout">Tout</label>
+
+            <input type="radio" name="category" id="vetements">
+            <label for="vetements">Vêtements</label>
+
+            <input type="radio" name="category" id="sous-vetements">
+            <label for="sous-vetements">Sous-vêtements</label>
+
+            <input type="radio" name="category" id="gants">
+            <label for="gants">Gants</label>
+
+            <input type="radio" name="category" id="chaussures">
+            <label for="chaussures">Chaussures</label>
+
+            <input type="radio" name="category" id="lunettes">
+            <label for="lunettes">Lunettes</label>
+        </aside>
+
     <section class="enfant">
         <!-- Vêtements pour enfant -->
         <a href="#" class="article">
@@ -64,6 +97,25 @@
             <img src="../../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp" alt="Pantalon Ski Enfant" loading="lazy">
             <div class="details">
                 <p class="name">Pantalon Ski Enfant</p>
+                <p class="price">59,99 €</p>
+            </div>
+        </a>
+    </section>
+
+    <section class="sous-vetements">
+        <a href="#" class="article">
+            <img src="../../images/OngletVetements/sousVetements/sousVetementE/sousVE.webp" alt="Ensemble enfant 1"
+                loading="lazy">
+            <div class="details">
+                <p class="name">Ensemble Thermique Enfant</p>
+                <p class="price">49,99 €</p>
+            </div>
+        </a>
+        <a href="#" class="article">
+            <img src="../../images/OngletVetements/sousVetements/sousVetementE/sousVEnfants.webp" alt="Ensemble enfant 2"
+                loading="lazy">
+            <div class="details">
+                <p class="name">Ensemble Thermique Enfant</p>
                 <p class="price">59,99 €</p>
             </div>
         </a>
@@ -105,15 +157,25 @@
         </a>
     </section>
 
+    <section class="gants">
+        <a href="#" class="article">
+            <img src="../../images/OngletVetements/gants/gantsE.webp" alt="Gants Enfant" loading="lazy">
+            <div class="details">
+                <p class="name">Gants Ski Enfant</p>
+                <p class="price">22,99 €</p>
+            </div>
+        </a>
+        <a href="#" class="article">
+            <img src="../../images/OngletVetements/gants/gantsE2.webp" alt="Gants Enfant Modèle 2" loading="lazy">
+            <div class="details">
+                <p class="name">Gants Hiver Enfant</p>
+                <p class="price">19,99 €</p>
+            </div>
+        </a>
+    </section>
+ </main>
 
-
-
-
-
-
-
-
-
+ 
 </body>
 
 </html>
