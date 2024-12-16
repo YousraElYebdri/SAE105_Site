@@ -40,7 +40,7 @@
         </ul>
 
         <ul class="right">
-            <li><a href="../panier.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="../panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <li><a href="../contact.html">À propos</a></li>
         </ul>
     </nav>
@@ -52,7 +52,7 @@
             <li><a href="vetementsEnfant/enfant.html">Enfant</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="vetement">
         <aside class="filters">
             <!-- Radios pour filtrage -->
             <input type="radio" name="category" id="tout" checked>
@@ -70,201 +70,465 @@
         </aside>
         <section class="articles">
             <section class="vetements">
-                <a href="#" class="article">
+                <div class="article">
                     <img src="../images/OngletVetements/vetements/vetementFemme/blousonSki.webp"
                         alt="Blouson Ski Femme">
                     <div class="details">
                         <p class="name">Blouson Ski Femme</p>
                         <p class="price">129,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Femme">
+                        <input type="hidden" name="prix" value="129.99">
+                        <label for="quantite_blouson_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
                     <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
                         alt="Pantalon Ski Femme">
                     <div class="details">
                         <p class="name">Pantalon Ski Femme</p>
                         <p class="price">89,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Femme">
+                        <input type="hidden" name="prix" value="89.99">
+                        <label for="quantite_pantalon_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
                     <img src="../images/OngletVetements/vetements/vetementHomme/blousonSkiDevant.webp"
                         alt="Blouson Ski Homme">
                     <div class="details">
                         <p class="name">Blouson Ski Homme</p>
                         <p class="price">139,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Homme">
+                        <input type="hidden" name="prix" value="139.99">
+                        <label for="quantite_blouson_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
                     <img src="../images/OngletVetements/vetements/vetementHomme/basSki.webp" alt="Pantalon Ski Homme">
                     <div class="details">
                         <p class="name">Pantalon Ski Homme</p>
                         <p class="price">99,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Homme">
+                        <input type="hidden" name="prix" value="99.99">
+                        <label for="quantite_pantalon_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
                     <img src="../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp"
                         alt="Blouson Ski Enfant">
                     <div class="details">
                         <p class="name">Blouson Ski Enfant</p>
                         <p class="price">79,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Enfant">
+                        <input type="hidden" name="prix" value="79.99">
+                        <label for="quantite_blouson_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
                     <img src="../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp"
                         alt="Pantalon Ski Enfant">
                     <div class="details">
                         <p class="name">Pantalon Ski Enfant</p>
                         <p class="price">69,99 €</p>
                     </div>
-                </a>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Enfant">
+                        <input type="hidden" name="prix" value="69.99">
+                        <label for="quantite_pantalon_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
             </section>
             <section class="sous-vetements">
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/sousVetements/sousVetementF/tshirt.webp" alt="Article Image 1">
+                <div class="article">
+                    <img src="../images/OngletVetements/sousVetements/sousVetementF/tshirt.webp" alt="T-shirt Thermique Femme">
                     <div class="details">
                         <p class="name">T-shirt Thermique Femme</p>
                         <p class="price">29,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/sousVetements/sousVetementF/legging.webp" alt="Article Image 2">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="T-shirt Thermique Femme">
+                        <input type="hidden" name="prix" value="29.99">
+                        <label for="quantite_tshirt_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_tshirt_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/sousVetements/sousVetementF/legging.webp" alt="Legging Thermique Femme">
                     <div class="details">
                         <p class="name">Legging Thermique Femme</p>
                         <p class="price">34,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                     <img src="../images/OngletVetements/sousVetements/sousVetementH/tshirt.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Legging Thermique Femme">
+                        <input type="hidden" name="prix" value="34.99">
+                        <label for="quantite_legging_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_legging_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/sousVetements/sousVetementH/tshirt.webp" alt="T-shirt Thermique Homme">
                     <div class="details">
                         <p class="name">T-shirt Thermique Homme</p>
                         <p class="price">29,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/sousVetements/sousVetementH/legging.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="T-shirt Thermique Homme">
+                        <input type="hidden" name="prix" value="29.99">
+                        <label for="quantite_tshirt_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_tshirt_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/sousVetements/sousVetementH/legging.webp" alt="Legging Thermique Homme">
                     <div class="details">
                         <p class="name">Legging Thermique Homme</p>
                         <p class="price">34,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/sousVetements/sousVetementE/sousVEnfants.webp"
-                        alt="Article Image 3">
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/sousVetements/sousVetementE/sousVE.webp" alt="Article Image 3">
-                </a>
-
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Legging Thermique Homme">
+                        <input type="hidden" name="prix" value="34.99">
+                        <label for="quantite_legging_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_legging_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/sousVetements/sousVetementE/sousVEnfants.webp" alt="Ensemble Thermique Enfant">
+                    <div class="details">
+                        <p class="name">Ensemble Thermique Enfant</p>
+                        <p class="price">49,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Ensemble Thermique Enfant">
+                        <input type="hidden" name="prix" value="49.99">
+                        <label for="quantite_ensemble_enfant1">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ensemble_enfant1" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/sousVetements/sousVetementE/sousVE.webp" alt="Ensemble Thermique Enfant">
+                    <div class="details">
+                        <p class="name">Ensemble Thermique Enfant</p>
+                        <p class="price">59,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Ensemble Thermique Enfant">
+                        <input type="hidden" name="prix" value="59.99">
+                        <label for="quantite_ensemble_enfant2">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ensemble_enfant2" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
             </section>
             <section class="gants">
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/gants/gantsF.png" alt="Article Image 1">
+                <div class="article">
+                    <img src="../images/OngletVetements/gants/gantsF.jpg" alt="Gants Ski Femme">
                     <div class="details">
                         <p class="name">Gants Ski Femme</p>
                         <p class="price">19,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/gants/gantsF1.png" alt="Article Image 2">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Ski Femme">
+                        <input type="hidden" name="prix" value="19.99">
+                        <label for="quantite_gants_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/gants/gantsF1.jpg" alt="Gants Hiver Femme">
                     <div class="details">
                         <p class="name">Gants Hiver Femme</p>
                         <p class="price">24,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/gants/gants.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Hiver Femme">
+                        <input type="hidden" name="prix" value="24.99">
+                        <label for="quantite_gants_hiver_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_hiver_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/gants/gants.webp" alt="Gants Ski Homme">
                     <div class="details">
                         <p class="name">Gants Ski Homme</p>
                         <p class="price">19,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/gants/gants1.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Ski Homme">
+                        <input type="hidden" name="prix" value="19.99">
+                        <label for="quantite_gants_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/gants/gants1.webp" alt="Gants Hiver Homme">
                     <div class="details">
                         <p class="name">Gants Hiver Homme</p>
                         <p class="price">24,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/gants/gantsE.webp" alt="Article Image 3">
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/gants/gantsE2.webp" alt="Article Image 3">
-                </a>
-
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Hiver Homme">
+                        <input type="hidden" name="prix" value="24.99">
+                        <label for="quantite_gants_hiver_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_hiver_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/gants/gantsE.webp" alt="Gants Ski Enfant">
+                    <div class="details">
+                        <p class="name">Gants Ski Enfant</p>
+                        <p class="price">22,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Ski Enfant">
+                        <input type="hidden" name="prix" value="22.99">
+                        <label for="quantite_gants_enfant_ski">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_enfant_ski" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/gants/gantsE2.webp" alt="Gants Hiver Enfant">
+                    <div class="details">
+                        <p class="name">Gants Hiver Enfant</p>
+                        <p class="price">19,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Hiver Enfant">
+                        <input type="hidden" name="prix" value="19.99">
+                        <label for="quantite_gants_enfant_hiver">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_enfant_hiver" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
             </section>
             <section class="chaussures">
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/chaussure/chaussureApresSkiF.webp" alt="Article Image 1">
+                <div class="article">
+                    <img src="../images/OngletVetements/chaussure/chaussureApresSkiF.webp" alt="Chaussure Après-Ski Femme">
                     <div class="details">
                         <p class="name">Chaussure Après-Ski Femme</p>
                         <p class="price">79,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                     <img src="../images/OngletVetements/chaussure/chaussureF.webp" alt="Article Image 2">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure Après-Ski Femme">
+                        <input type="hidden" name="prix" value="79.99">
+                        <label for="quantite_apres_ski_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_apres_ski_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                     <img src="../images/OngletVetements/chaussure/chaussureF.webp" alt="Chaussure de Ski Femme">
                     <div class="details">
                         <p class="name">Chaussure de Ski Femme</p>
                         <p class="price">99,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/chaussure/chaussureapresSkiH.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure de Ski Femme">
+                        <input type="hidden" name="prix" value="99.99">
+                        <label for="quantite_ski_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ski_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/chaussure/chaussureapresSkiH.webp" alt="Chaussure Après-Ski Homme">
                     <div class="details">
                         <p class="name">Chaussure Après-Ski Homme</p>
                         <p class="price">79,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/chaussure/chaussureH.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure Après-Ski Homme">
+                        <input type="hidden" name="prix" value="79.99">
+                        <label for="quantite_apres_ski_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_apres_ski_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/chaussure/chaussureH.webp" alt="Chaussure de Ski Homme">
                     <div class="details">
                         <p class="name">Chaussure de Ski Homme</p>
                         <p class="price">99,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/chaussure/chaussureApresSkiE.webp" alt="Article Image 3">
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/chaussure/chaussureE.webp" alt="Article Image 3">
-                </a>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure de Ski Homme">
+                        <input type="hidden" name="prix" value="99.99">
+                        <label for="quantite_ski_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ski_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/chaussure/chaussureApresSkiE.webp" alt="Chaussure pour enfant">
+                    <div class="details">
+                        <p class="name">Chaussure pour enfant</p>
+                        <p class="price">69,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure pour enfant">
+                        <input type="hidden" name="prix" value="69.99">
+                        <label for="quantite_apres_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_apres_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/chaussure/chaussureE.webp" alt="Chaussure de ski pour enfant">
+                    <div class="details">
+                        <p class="name">Chaussure de ski pour enfant</p>
+                        <p class="price">75,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure de ski pour enfant">
+                        <input type="hidden" name="prix" value="75.99">
+                        <label for="quantite_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
             </section>
 
             <section class="lunettes">
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/lunettes/lunetteSki.webp" alt="Article Image 1">
+                <div class="article">
+                    <img src="../images/OngletVetements/lunettes/lunetteSki.webp" alt="Lunette de Ski Femme">
                     <div class="details">
                         <p class="name">Lunette de Ski Femme</p>
                         <p class="price">59,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/lunettes/lunetteSoleil.webp" alt="Article Image 2">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunette de Ski Femme">
+                        <input type="hidden" name="prix" value="59.99">
+                        <label for="quantite_ski_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ski_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/lunettes/lunetteSoleil.webp" alt="Lunette de Soleil Femme">
                     <div class="details">
                         <p class="name">Lunette de Soleil Femme</p>
                         <p class="price">49,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/lunettes/lunetteH.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunette de Soleil Femme">
+                        <input type="hidden" name="prix" value="49.99">
+                        <label for="quantite_soleil_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_soleil_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/lunettes/lunetteH.webp" alt="Lunette de Ski Homme">
                     <div class="details">
                         <p class="name">Lunette de Ski Homme</p>
                         <p class="price">59,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                     <img src="../images/OngletVetements/lunettes/lunetteSoleil1.webp" alt="Article Image 3">
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunette de Ski Homme">
+                        <input type="hidden" name="prix" value="59.99">
+                        <label for="quantite_ski_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ski_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/lunettes/lunetteSoleil1.webp" alt="Lunette de Soleil Homme">
                     <div class="details">
                         <p class="name">Lunette de Soleil Homme</p>
                         <p class="price">49,99 €</p>
                     </div>
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/lunettes/lunetteSkiE.webp" alt="Article Image 3">
-                </a>
-                <a href="#" class="article">
-                    <img src="../images/OngletVetements/lunettes/masque de ski.webp" alt="Article Image 3">
-                </a>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunette de Soleil Homme">
+                        <input type="hidden" name="prix" value="49.99">
+                        <label for="quantite_soleil_homme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_soleil_homme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/lunettes/lunetteSkiE.webp" alt="Lunettes de ski">
+                    <div class="details">
+                        <p class="name">Lunettes de ski Enfant</p>
+                        <p class="price">69,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunettes de ski">
+                        <input type="hidden" name="prix" value="69.99">
+                        <label for="quantite_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            
+                <div class="article">
+                    <img src="../images/OngletVetements/lunettes/masque de ski.webp" alt="Lunettes de soleil">
+                    <div class="details">
+                        <p class="name">Lunettes de soleil Enfant</p>
+                        <p class="price">49,50 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunettes de soleil">
+                        <input type="hidden" name="prix" value="49.50">
+                        <label for="quantite_soleil_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_soleil_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
             </section>
         </section>
     </main>

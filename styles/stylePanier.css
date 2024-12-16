@@ -1,0 +1,146 @@
+/* Général */
+body {
+    font-family: "Rowdies", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0;
+    color: #12233b;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Centrage du tableau */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #12233b;
+    color: #673b8d;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+tfoot {
+    background-color: #3f7acb;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tfoot td {
+    padding: 15px;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+/* Bouton supprimer */
+button.delete {
+    background-color: #ff5c5c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.delete:hover {
+    background-color: #d43c3c;
+}
+
+/* Bouton continuer les achats */
+button.continue {
+    background-color: #12233b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button.continue:hover {
+    background-color: #3f7acb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    tbody td:last-child {
+        border-bottom: none;
+    }
+
+    tfoot td {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    button.continue {
+        width: 100%;
+        text-align: center;
+    }
+}

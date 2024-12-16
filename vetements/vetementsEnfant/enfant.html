@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/style_ssmenu.css">
     <title>MMI Sports de glisse</title>
     <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
 </head>
@@ -25,7 +25,6 @@
     </nav>
 
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
         <ul class="left">
             <li>
                 <a href="../../contact.html">
@@ -34,36 +33,29 @@
             </li>
             <li><a href="../../index.html">MMI SDG</a></li>
         </ul>
-        
-        <!-- Partie centrale -->
+
         <ul class="center">
             <li><a href="../vetement.html">Vêtements</a></li>
             <li><a href="../../accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="../../tutoriel.html">Tutoriel</a></li>
-            
-        </ul>    
- 
-        <!-- Partie droite -->
+        </ul>
+
         <ul class="right">
-            <li><a href="../../panier.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="../../panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <li><a href="../../contact.html">À propos</a></li>
         </ul>
     </nav>
 
     <nav class="sous-menu">
-        <!-- Menu secondaire avec des options de filtrage par catégorie (femme, homme, enfant) -->
         <ul class="center">
-            <li><a href="enfant.html">femme</a></li>
+            <li><a href="../vetementsFemme/femme.html">femme</a></li>
             <li><a href="../vetementsHomme/homme.html">homme</a></li>
-            <li><a href="../vetementsFemme/femme.html">enfant</a></li>
+            <li><a href="enfant.html">enfant</a></li>
         </ul>
     </nav>
 
-
     <main>
-
         <aside class="filters">
-            <!-- Radios pour filtrage -->
             <input type="radio" name="category" id="tout" checked>
             <label for="tout">Tout</label>
 
@@ -83,99 +75,176 @@
             <label for="lunettes">Lunettes</label>
         </aside>
 
-    <section class="enfant">
-        <!-- Vêtements pour enfant -->
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp" alt="Blouson Ski Enfant" loading="lazy">
-            <div class="details">
-                <p class="name">Blouson Ski Enfant</p>
-                <p class="price">99,99 €</p>
-            </div>
-        </a>
-
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp" alt="Pantalon Ski Enfant" loading="lazy">
-            <div class="details">
-                <p class="name">Pantalon Ski Enfant</p>
-                <p class="price">59,99 €</p>
-            </div>
-        </a>
-    </section>
-
-    <section class="sous-vetements">
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/sousVetements/sousVetementE/sousVE.webp" alt="Ensemble enfant 1"
-                loading="lazy">
-            <div class="details">
-                <p class="name">Ensemble Thermique Enfant</p>
-                <p class="price">49,99 €</p>
-            </div>
-        </a>
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/sousVetements/sousVetementE/sousVEnfants.webp" alt="Ensemble enfant 2"
-                loading="lazy">
-            <div class="details">
-                <p class="name">Ensemble Thermique Enfant</p>
-                <p class="price">59,99 €</p>
-            </div>
-        </a>
-    </section>
-
-    <section class="Enfant">
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/chaussure/chaussureApresSkiE.webp" alt="Chaussure pour enfant" loading="lazy">
-            <div class="details">
-                <p class="name">Chaussure pour enfant</p>
-                <p class="price">69,99 €</p>
-            </div>
-        </a>
-
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/chaussure/chaussureE.webp" alt="Chaussure de Ski pour enfant" loading="lazy">
-            <div class="details">
-                <p class="name">Chaussure de ski pour enfant</p>
-                <p class="price">75,99 €</p>
-            </div>
-        </a>
-    </section>
-
-    <section class="Enfant">
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/lunettes/lunetteSkiE.webp" alt="Lunettes de Ski pour enfant" loading="lazy">
-            <div class="details">
-                <p class="name">Lunettes de ski</p>
-                <p class="price">69,99 €</p>
-            </div>
-        </a>
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/lunettes/lunetteSoleil.webp" alt="Lunettes de soleil pour enfant"
-                loading="lazy">
-                <div class="details">
-                    <p class="name">Lunettes de soleil</p>
-                    <p class="price">49,50 €</p>
+        <section class="articles">
+            <!-- Vêtements -->
+            <section class="vetements">
+                <div class="article">
+                    <img src="../../images/OngletVetements/vetements/vetementEnfant/BlousonSki.webp"
+                        alt="Blouson Ski Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Blouson Ski Enfant</p>
+                        <p class="price">99,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Enfant">
+                        <input type="hidden" name="prix" value="99.99">
+                        <label for="quantite_blouson_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
                 </div>
-        </a>
-    </section>
+                <div class="article">
+                    <img src="../../images/OngletVetements/vetements/vetementEnfant/pantalonSki.webp"
+                        alt="Pantalon Ski Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Pantalon Ski Enfant</p>
+                        <p class="price">59,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Enfant">
+                        <input type="hidden" name="prix" value="59.99">
+                        <label for="quantite_pantalon_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
 
-    <section class="gants">
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/gants/gantsE.webp" alt="Gants Enfant" loading="lazy">
-            <div class="details">
-                <p class="name">Gants Ski Enfant</p>
-                <p class="price">22,99 €</p>
-            </div>
-        </a>
-        <a href="#" class="article">
-            <img src="../../images/OngletVetements/gants/gantsE2.webp" alt="Gants Enfant Modèle 2" loading="lazy">
-            <div class="details">
-                <p class="name">Gants Hiver Enfant</p>
-                <p class="price">19,99 €</p>
-            </div>
-        </a>
-    </section>
- </main>
+            <!-- Sous-vêtements -->
+            <section class="sous-vetements">
+                <div class="article">
+                    <img src="../../images/OngletVetements/sousVetements/sousVetementE/sousVE.webp"
+                        alt="Ensemble Thermique Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Ensemble Thermique Enfant</p>
+                        <p class="price">49,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Ensemble Thermique Enfant">
+                        <input type="hidden" name="prix" value="49.99">
+                        <label for="quantite_ensemble_thermique_1">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ensemble_thermique_1" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+                <div class="article">
+                    <img src="../../images/OngletVetements/sousVetements/sousVetementE/sousVEnfants.webp"
+                        alt="Ensemble Thermique Enfant Modèle 2" loading="lazy">
+                    <div class="details">
+                        <p class="name">Ensemble Thermique Enfant Modèle 2</p>
+                        <p class="price">59,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Ensemble Thermique Enfant Modèle 2">
+                        <input type="hidden" name="prix" value="59.99">
+                        <label for="quantite_ensemble_thermique_2">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_ensemble_thermique_2" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
 
- 
+            <!-- Gants -->
+            <section class="gants">
+                <div class="article">
+                    <img src="../../images/OngletVetements/gants/gantsE.webp" alt="Gants Ski Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Gants Ski Enfant</p>
+                        <p class="price">22,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Ski Enfant">
+                        <input type="hidden" name="prix" value="22.99">
+                        <label for="quantite_gants_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+                <div class="article">
+                    <img src="../../images/OngletVetements/gants/gantsE2.webp" alt="Gants Hiver Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Gants Hiver Enfant</p>
+                        <p class="price">19,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Gants Hiver Enfant">
+                        <input type="hidden" name="prix" value="19.99">
+                        <label for="quantite_gants_hiver_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_gants_hiver_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Chaussures -->
+            <section class="chaussures">
+                <div class="article">
+                    <img src="../../images/OngletVetements/chaussure/chaussureApresSkiE.webp"
+                        alt="Chaussure Après-Ski Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Chaussure Après-Ski Enfant</p>
+                        <p class="price">69,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure Après-Ski Enfant">
+                        <input type="hidden" name="prix" value="69.99">
+                        <label for="quantite_chaussure_apres_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_chaussure_apres_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+                <div class="article">
+                    <img src="../../images/OngletVetements/chaussure/chaussureE.webp"
+                        alt="Chaussure de Ski Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Chaussure de Ski Enfant</p>
+                        <p class="price">75,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Chaussure de Ski Enfant">
+                        <input type="hidden" name="prix" value="75.99">
+                        <label for="quantite_chaussure_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_chaussure_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Lunettes -->
+            <section class="lunettes">
+                <div class="article">
+                    <img src="../../images/OngletVetements/lunettes/lunetteSkiE.webp"
+                        alt="Lunettes de Ski Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Lunettes de Ski Enfant</p>
+                        <p class="price">69,99 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunettes de Ski Enfant">
+                        <input type="hidden" name="prix" value="69.99">
+                        <label for="quantite_lunettes_ski_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_lunettes_ski_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+                <div class="article">
+                    <img src="../../images/OngletVetements/lunettes/lunetteSoleil.webp"
+                        alt="Lunettes de Soleil Enfant" loading="lazy">
+                    <div class="details">
+                        <p class="name">Lunettes de Soleil Enfant</p>
+                        <p class="price">49,50 €</p>
+                    </div>
+                    <form action="../../scripts/ajouter_au_panier.php" method="post">
+                        <input type="hidden" name="nom" value="Lunettes de Soleil Enfant">
+                        <input type="hidden" name="prix" value="49.50">
+                        <label for="quantite_lunettes_soleil_enfant">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_lunettes_soleil_enfant" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 
 </html>
