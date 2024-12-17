@@ -58,54 +58,33 @@
                     <th>Quantité</th>
                     <th>Prix Unitaire (€)</th>
                     <th>Sous-total (€)</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <?php
-                $fichier = 'panier2.txt';
-                if (!file_exists($fichier)) {
-                    file_put_contents($fichier, ''); // Crée un fichier vide
-                }
-                $total_general = 0;
+            <?php
+                $nombre = $_POST['nombre'];
+                $prix = $_POST['prix'];
+                $nom = $_POST['nom'];
+                $total = $nombre * $prix;
+                
+                $fichier = fopen('scripts/panier2.txt','a');     
+                fwrite($fichier,"$nom|$nombre|$prix|$total|"); //ligne permettant d'écrire dans le fichier parnier2.txt'
+                fclose($fichier); // Fermeture du fichier panier2.txt
 
-                if (file_exists($fichier)) {
-                    $lignes = file($fichier, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                $fichier = fopen('scripts/panier2.txt','r'); // Ouverture du fichier panier2.txt en lecture
+                $donnees = fread($fichier,filesize('scripts/panier2.txt')); // lecture du fichier panier2.txt jusqu'à la fin du fichier
+                echo $donnees . "<br>"; 
 
-                    foreach ($lignes as $index => $ligne) {
-                        $donnees = explode('|', $ligne);
+                $lecture = explode(" ",$donnees); //les éléments de la variable donnees sont mis dans le tableau lecture en prenant comme séparateur le caractère "|"
+                echo $lecture[0]; // affichage à l'écran du contenu de la première case du tableau lecture
+                echo "<br>".$lecture[2]; // affichage à l'écran du contenu de la troisième case du tableau lecture
+                fclose($fichier); // Fermeture du fichier panier2.txt    
+?>
 
-                        // Validation des données
-                        if (count($donnees) >= 4) {
-                            $nom = htmlspecialchars($donnees[0]);
-                            $nombre = (int)$donnees[1];
-                            $prix = (float)$donnees[2];
-                            $total = (float)$donnees[3];
-                            $total_general += $total;
-
-                            echo "<tr>
-                                    <td>{$nom}</td>
-                                    <td>{$nombre}</td>
-                                    <td>" . number_format($prix, 2) . "</td>
-                                    <td>" . number_format($total, 2) . "</td>
-                                    <td>
-                                        <form action='supprimer_article.php' method='post'>
-                                            <input type='hidden' name='index' value='{$index}'>
-                                            <button class='delete' type='submit'>Supprimer</button>
-                                        </form>
-                                    </td>
-                                  </tr>";
-                        }
-                    }
-                } else {
-                    echo "<tr><td colspan='5'>Votre panier est vide.</td></tr>";
-                }
-                ?>
             </tbody>
             <tfoot>
                 <tr>
                     <td colspan="3"><strong>Total Général (€)</strong></td>
-                    <td><strong><?php echo number_format($total_general, 2); ?></strong></td>
                     <td></td>
                 </tr>
             </tfoot>
