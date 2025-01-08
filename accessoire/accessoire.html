@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -62,45 +61,146 @@
         </nav>
 
 
+        <main class="vetement">
         <section class="articles">
-
             <section class="luge">
-            
-            <a href="#" class="article">
-            <img src="../images/OngletAccessoire/luge/cordeLuge.webp" alt="Corde luge"
-            ="lazy">
-            <div class="details">
-            <p class="name">Corde luge</p>
-            <p class="price">9,99 €</p>
-            </div>
-
-            <a href="#" class="article">
-                <img src="../images/OngletAccessoire/luge/luge.webp" alt="luge"
-                ="lazy">
-                <div class="details">
-                <p class="name">Luge</p>
-                <p class="price">65.99 €</p>
-                </div>
-        
-            <section class="articles">
-
-                 <section class="raquettes">
-                    
-                    <a href="#" class="article">
-                    <img src="../images/OngletAccessoire/raquettes/baton raquette.jpg" alt="batons raquettes"
-                    ="lazy">
+                <div class="article">
+                    <img src="../images/OngletAccessoire/luge/cordeLuge.webp"
+                        alt="Corde luge">
                     <div class="details">
-                    <p class="name">Batons Raquettes</p>
-                    <p class="price">59,99 €</p>
+                        <p class="name">Blouson Ski Femme</p>
+                        <p class="price">129,99 €</p>
                     </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Femme">
+                        <input type="hidden" name="prix" value="129.99">
+                        <label for="quantite_blouson_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
 
-                    <a href="#" class="article">
-                        <img src="../images/OngletAccessoire/raquettes/raquettes.jpg" alt="raquettes"
-                        ="lazy">
-                        <div class="details">
-                        <p class="name">Raquettes</p>
-                        <p class="price">89.99 €</p>
-                        </div>
+                <div class="article">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
+                        alt="Pantalon Ski Femme">
+                    <div class="details">
+                        <p class="name">Pantalon Ski Femme</p>
+                        <p class="price">89,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Femme">
+                        <input type="hidden" name="prix" value="89.99">
+                        <label for="quantite_pantalon_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="raquettes">
+                <div class="article">
+                    <img src="../images/OngletAccessoire/luge/cordeLuge.webp"
+                        alt="Corde luge">
+                    <div class="details">
+                        <p class="name">Blouson Ski Femme</p>
+                        <p class="price">129,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Femme">
+                        <input type="hidden" name="prix" value="129.99">
+                        <label for="quantite_blouson_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
+                        alt="Pantalon Ski Femme">
+                    <div class="details">
+                        <p class="name">Pantalon Ski Femme</p>
+                        <p class="price">89,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Femme">
+                        <input type="hidden" name="prix" value="89.99">
+                        <label for="quantite_pantalon_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="skialpin">
+                <div class="article">
+                    <img src="../images/OngletAccessoire/luge/cordeLuge.webp"
+                        alt="Corde luge">
+                    <div class="details">
+                        <p class="name">Blouson Ski Femme</p>
+                        <p class="price">129,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Femme">
+                        <input type="hidden" name="prix" value="129.99">
+                        <label for="quantite_blouson_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
+                        alt="Pantalon Ski Femme">
+                    <div class="details">
+                        <p class="name">Pantalon Ski Femme</p>
+                        <p class="price">89,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Femme">
+                        <input type="hidden" name="prix" value="89.99">
+                        <label for="quantite_pantalon_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="snwb">
+                <div class="article">
+                    <img src="../images/OngletAccessoire/luge/cordeLuge.webp"
+                        alt="Corde luge">
+                    <div class="details">
+                        <p class="name">Blouson Ski Femme</p>
+                        <p class="price">129,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Blouson Ski Femme">
+                        <input type="hidden" name="prix" value="129.99">
+                        <label for="quantite_blouson_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_blouson_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+
+                <div class="article">
+                    <img src="../images/OngletVetements/vetements/vetementFemme/pantalonSki.webp"
+                        alt="Pantalon Ski Femme">
+                    <div class="details">
+                        <p class="name">Pantalon Ski Femme</p>
+                        <p class="price">89,99 €</p>
+                    </div>
+                    <form action="../panier.php" method="post">
+                        <input type="hidden" name="nom" value="Pantalon Ski Femme">
+                        <input type="hidden" name="prix" value="89.99">
+                        <label for="quantite_pantalon_femme">Quantité :</label>
+                        <input type="number" name="nombre" id="quantite_pantalon_femme" value="1" min="1">
+                        <button type="submit">Ajouter au panier</button>
+                    </form>
+                </div>
+            </section>
+
+        </section>
+        </main>
 
         
                     

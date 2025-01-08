@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rowdies", sans-serif;
+}
+
+/* Style pour menu-info */
+.menu-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #673b8d;
+    padding: 2px 0;
+    /* TrÃ¨s petit padding vertical pour rÃ©duire la hauteur */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* Liste droite dans menu-info */
+.menu-info .right-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espace horizontal entre les Ã©lÃ©ments */
+    list-style: none;
+}
+
+.menu-info .right-info li {
+    margin: 0;
+    /* Suppression des marges */
+    padding: 0 30px;
+    /* Suppression des paddings */
+}
+
+.menu-info .right-info li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 8px;
+    /* Taille inchangÃ©e */
+
+}
+
+/* Style de la navigation */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #12233b;
+}
+
+/* Style des listes dans chaque section */
+.menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Partie gauche (logo et nom) */
+.menu .left {
+    gap: 10px;
+    padding-left: 20px;
+}
+
+/* Partie centrale */
+.menu .center {
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Partie droite (panier) */
+.menu .right {
+    gap: 20px;
+    padding-right: 20px;
+}
+
+/* Style des liens */
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Transition de couleur */
+}
+
+.menu .right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+    /* Transition de couleur */
+}
+
+.menu .right li a i {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    /* Transition de couleur */
+}
+
+/* Couleur de survol */
+.menu li a:hover {
+    color: #3f7acb;
+    /* Couleur au survol */
+}
+
+.menu li a i:hover {
+    color: #3f7acb;
+    /* Couleur au survol */
+}
+
+/* Logo */
+.menu .logo {
+    width: 30px;
+    max-width: 100%;
+}
+
+/* Style de la navigation */
+.sous-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #3f7acb;
+}
+
+/* Style des listes dans chaque section */
+.sous-menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Partie centrale */
+.sous-menu .center {
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Style des liens */
+.sous-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Transition de couleur */
+}
+
+/* Couleur de survol */
+.sous-menu li a:hover {
+    color: #3f7acb;
+    /* Couleur au survol */
+}
+
+/* Page vetements */
+
+.vetement {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+
+/* Styles pour les sections spÃ©cifiques */
+section.luge,
+section.raquettes,
+section.skialpin,
+section.snwb {
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    max-width: 1300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+/* Section individuelle (ex. vÃªtements, sous-vÃªtements, etc.) */
+.articles>section {
+
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+/* Articles individuels */
+.article {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Conteneur des articles */
+a.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article:hover img {
+    transform: scale(1.1);
+}
+
+.article .details .name {
+    font-size: 16px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.article .details .price {
+    font-size: 14px;
+    font-family: "Rowdies", sans-serif;
+    color: #777;
+    margin: 5px 0 0 0;
+}
+/* Formulaire pour ajouter au panier */
+.article form {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Rowdies", sans-serif;
+}
+
+.article form input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.article form button {
+    font-family: "Rowdies", sans-serif;
+    background-color: #673b8d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.article form button:hover {
+    background-color: #3f7acb;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+        /* Filtres au-dessus des articles */
+    }
+
+    .filters {
+        width: 100%;
+        /* Les filtres occupent toute la largeur */
+    }
+
+    .article {
+        width: calc(50% - 10px);
+        /* Deux articles par ligne */
+    }
+}
+
+@media (max-width: 480px) {
+    .article {
+        width: 100%;
+        /* Un article par ligne */
+    }
+}
+
+.tutoriel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    flex: 1;
+    height: auto; /* Assure une hauteur correcte sur Safari */
+    min-height: 0; /* Évite les bugs de flex sur Safari */
+}
+
+.tutoriel h1 {
+    font-size: 30px;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    color: #673b8d;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Section vidéos */
+.videos {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.video {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.video h2 {
+    font-size: 25px;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    color: #12233b;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.video iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .videos {
+        grid-template-columns: 1fr;
+    }
+
+    .video iframe {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutoriel h1 {
+        font-size: 2rem;
+    }
+
+    .video h2 {
+        font-size: 1.2rem;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+
+
+
+/* Section Récapitulatif */
+.recapitulatif {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.recapitulatif h1 {
+    font-family: "Rowdies", sans-serif;
+    color: #673b8d;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recapitulatif p {
+    font-family: "Rowdies", sans-serif;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.recapitulatif p:last-child {
+    border-bottom: none;
+}
+
+.recapitulatif .highlight {
+    font-weight: bold;
+    color: #673b8d;
+}
+
+/* Liste pour les sports */
+.recapitulatif .sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.recapitulatif .sports-list span {
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid #ddd;
+}
