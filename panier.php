@@ -25,7 +25,6 @@
     </nav>
 
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
         <ul class="left">
             <li>
                 <a href="index.html">
@@ -35,14 +34,12 @@
             <li><a href="index.html">MMI SDG</a></li>
         </ul>
 
-        <!-- Partie centrale -->
         <ul class="center">
             <li><a href="vetements/vetement.html">Vêtements</a></li>
             <li><a href="accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="tutoriel.html">Tutoriel</a></li>
-        </ul>    
+        </ul>
 
-        <!-- Partie droite -->
         <ul class="right">
             <li><a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <li><a href="contact.html">À propos</a></li>
@@ -62,34 +59,49 @@
             </thead>
             <tbody>
             <?php
-                $nombre = $_POST['nombre'];
-                $prix = $_POST['prix'];
-                $nom = $_POST['nom'];
-                $total = $nombre * $prix;
+            $totalGeneral = 0; // Initialisation pour éviter les warnings
+
+            // Vérifiez si le fichier panier existe et n'est pas vide
+            if (file_exists('scripts/panier2.txt') && filesize('scripts/panier2.txt') > 0) {
+                $fichier = fopen('scripts/panier2.txt', 'r');
                 
-                $fichier = fopen('scripts/panier2.txt','a');     
-                fwrite($fichier,"$nom|$nombre|$prix|$total|"); //ligne permettant d'écrire dans le fichier parnier2.txt'
-                fclose($fichier); // Fermeture du fichier panier2.txt
+                while (($ligne = fgets($fichier)) !== false) {
+                    // Découpez la ligne en utilisant "|" comme séparateur
+                    $data = explode('|', trim($ligne));
+                    
+                    // Assurez-vous que la ligne contient bien les 3 éléments attendus
+                    if (count($data) === 3) {
+                        list($nom, $quantite, $prix) = $data;
+                        $sousTotal = intval($quantite) * floatval($prix);
+                        
+                        // Affichez l'article dans le tableau
+                        echo "<tr>
+                                <td>" . htmlspecialchars($nom) . "</td>
+                                <td>" . intval($quantite) . "</td>
+                                <td>" . number_format(floatval($prix), 2) . " €</td>
+                                <td>" . number_format($sousTotal, 2) . " €</td>
+                            </tr>";
+                        
+                        // Ajoutez le sous-total au total général
+                        $totalGeneral += $sousTotal;
+                    }
+                }
 
-                $fichier = fopen('scripts/panier2.txt','r'); // Ouverture du fichier panier2.txt en lecture
-                $donnees = fread($fichier,filesize('scripts/panier2.txt')); // lecture du fichier panier2.txt jusqu'à la fin du fichier
-                echo $donnees . "<br>"; 
-
-                $lecture = explode(" ",$donnees); //les éléments de la variable donnees sont mis dans le tableau lecture en prenant comme séparateur le caractère "|"
-                echo $lecture[0]; // affichage à l'écran du contenu de la première case du tableau lecture
-                echo "<br>".$lecture[2]; // affichage à l'écran du contenu de la troisième case du tableau lecture
-                fclose($fichier); // Fermeture du fichier panier2.txt    
-?>
-
+                fclose($fichier);
+            } else {
+                // Si le fichier est vide ou inexistant, affichez un message
+                echo "<tr><td colspan='4'>Votre panier est vide.</td></tr>";
+            }
+            ?>
             </tbody>
             <tfoot>
                 <tr>
                     <td colspan="3"><strong>Total Général (€)</strong></td>
-                    <td></td>
+                    <td><strong><?php echo number_format($totalGeneral, 2); ?> €</strong></td>
                 </tr>
             </tfoot>
         </table>
-        <button class="continue" onclick="window.location.href='vetements/vetement.html'">Continuer vos achats</button>
+        <button class="continue" href='vetements/vetement.html'">Continuer vos achats</button>
     </div>
 </body>
 
