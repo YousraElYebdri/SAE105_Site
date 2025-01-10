@@ -24,6 +24,6 @@ if(isset($_POST[ 'swb'])){
 }
 
 
-    include('../synthese.php');
+    include('../recapitulatif.php');
 
 ?>
