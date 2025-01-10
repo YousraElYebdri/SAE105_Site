@@ -45,19 +45,60 @@
         </ul>
     </nav>
     <section class="recapitulatif">
-        <h1>Récapitulatif</h1>
-        <p> Civilité : <?php echo $civilite; ?></p>
-        <p> Nom : <?php echo $nom; ?></p>
-        <p> Prénom : <?php echo $prenom; ?></p>
-        <p> Adresse : <?php echo $adresse; ?></p>
-        <p> Date de Naissance : <?php echo $datenaissance; ?></p>
-        <p> Adresse mail : <?php echo $mail; ?></p>
-        <p> Sport pratiqué : 
-                <?php foreach ($sport as $element){
-                        echo $element . ' ';
-                } ?>
-        </p>
-        <p class="highlight">Zone sélectionnée : <?php echo htmlspecialchars($zoneSelectionnee); ?></p>
-    </section>
+    <h1>Récapitulatif</h1>
+    <p> Civilité : <?php echo htmlspecialchars($civilite); ?></p>
+    <p> Nom : <?php echo htmlspecialchars($nom); ?></p>
+    <p> Prénom : <?php echo htmlspecialchars($prenom); ?></p>
+    <p> Adresse : <?php echo htmlspecialchars($adresse); ?></p>
+    <p> Date de Naissance : <?php echo htmlspecialchars($datenaissance); ?></p>
+    <p> Adresse mail : <?php echo htmlspecialchars($mail); ?></p>
+    <p> Sport pratiqué : 
+        <?php 
+            if (!empty($sport)) {
+                foreach ($sport as $element) {
+                    echo htmlspecialchars($element) . ' ';
+                }
+            } else {
+                echo 'Aucun sport sélectionné';
+            }
+        ?>
+    </p>
+    <p class="highlight">Zone sélectionnée : <?php echo htmlspecialchars($zoneSelectionnee); ?></p>
+
+    <?php if (!empty($zoneSelectionnee)) { 
+        // Mapping des zones avec leurs codes pour l'API Météo-France
+        $zonesCode = [
+            "Thonon-les-bains" => "742810",
+            "Annemasse" => "740120",
+            "Annecy" => "740100",
+            "Aix-les-bains" => "730080",
+            "Albertville" => "730110",
+            "Chambéry" => "730650",
+            "Grenoble" => "381850",
+            "Briançon" => "050230"
+        ];
+
+        // Récupérer le code de la zone sélectionnée
+        $codeZone = $zonesCode[$zoneSelectionnee] ?? null;
+
+        if ($codeZone) { ?>
+            <div class="meteo">
+                <iframe 
+                    id="widget_autocomplete_preview" 
+                    width="560" 
+                    height= auto
+                    frameborder="0" 
+                    src="https://meteofrance.com/widget/prevision/<?php echo $codeZone; ?>##673b8d"
+                    title="Prévisions <?php echo htmlspecialchars($zoneSelectionnee); ?> par Météo-France"
+                    style="border: 0px solid #10658E;border-radius: 8px">
+                </iframe>
+            </div>
+        <?php } else { ?>
+            <p>Impossible d'afficher la météo pour cette zone.</p>
+        <?php } ?>
+    <?php } else { ?>
+        <p>Aucune zone sélectionnée pour afficher la météo.</p>
+    <?php } ?>
+</section>
 </body>
 </html>
