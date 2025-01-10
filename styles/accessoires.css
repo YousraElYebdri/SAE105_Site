@@ -167,14 +167,6 @@
     /* Couleur au survol */
 }
 
-/* Page vetements */
-
-.vetement {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-    margin: 20px;
-}
 
 
 /* Styles pour les sections spÃ©cifiques */
@@ -198,7 +190,7 @@ section.snwb {
     gap: 10px;
 }
 
-/* Section individuelle (ex. vÃªtements, sous-vÃªtements, etc.) */
+/* Section individuelle (ex. raquettes, snowboard, etc.) */
 .articles>section {
 
     padding: 20px;
@@ -328,163 +320,3 @@ a.article {
     }
 }
 
-.tutoriel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    flex: 1;
-    height: auto; /* Assure une hauteur correcte sur Safari */
-    min-height: 0; /* Évite les bugs de flex sur Safari */
-}
-
-.tutoriel h1 {
-    font-size: 30px;
-    font-family: "Rowdies", sans-serif;
-    text-transform: uppercase;
-    color: #673b8d;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Section vidéos */
-.videos {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.video {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.video:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.video h2 {
-    font-size: 25px;
-    font-family: "Rowdies", sans-serif;
-    text-transform: uppercase;
-    color: #12233b;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.video iframe {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .videos {
-        grid-template-columns: 1fr;
-    }
-
-    .video iframe {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .tutoriel h1 {
-        font-size: 2rem;
-    }
-
-    .video h2 {
-        font-size: 1.2rem;
-    }
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #f4f4f4;
-}
-
-
-
-
-/* Section Récapitulatif */
-.recapitulatif {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: "Arial", sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-.recapitulatif h1 {
-    font-family: "Rowdies", sans-serif;
-    color: #673b8d;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.recapitulatif p {
-    font-family: "Rowdies", sans-serif;
-    margin-bottom: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 14px;
-}
-
-.recapitulatif p:last-child {
-    border-bottom: none;
-}
-
-.recapitulatif .highlight {
-    font-weight: bold;
-    color: #673b8d;
-}
-
-/* Liste pour les sports */
-.recapitulatif .sports-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.recapitulatif .sports-list span {
-    background-color: #f4f4f4;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    color: #333;
-    border: 1px solid #ddd;
-}
