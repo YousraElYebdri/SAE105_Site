@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,86 +11,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles/accessoires.css">
-    <title>MMI Sports de glisse</title>
+    <title>MMI Winter Sports</title>
     <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
 </head>
 
 <body>
 
     <nav class="menu-info">
-        <ul class="right-info">
-            <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
-            <li><a href="snowshoeing.html"><img src="../../images/royaume-uni.png" alt="anglais" class="langue"></a></li>
-        </ul>
+        <nav class="menu-info">
+            <ul class="right-info">
+                <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
+                <li><a href="raquettes.html"><img src="../../images/icons8-la-france-96.png" alt="French" class="langue"></a></li>
+            </ul>
+        </nav>
     </nav>
 
-
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
+        <!-- Left section with logo and name -->
         <ul class="left">
             <li>
-                <a href="../../index.html">
+                <a href="../../index_en.html">
                     <img src="../../images/favicon.png" alt="Logo" class="logo">
                 </a>
             </li>
-            <li><a href="../../index.html">MMI SDH</a></li>
+            <li><a href="../../index_en.html">MMI SDH</a></li>
         </ul>
 
-        <!-- Partie centrale -->
+        <!-- Center section -->
         <ul class="center">
-            <li><a href="../../vetements/vetement.html">Vêtements</a></li>
-            <li><a href="../accessoire.html">Accessoire</a></li>
-            <li><a href="../../tutoriel.html">Tutoriel</a></li>
-
+            <li><a href="../../vetements/clothing.html">Clothing</a></li>
+            <li><a href="../accessories.html">Accessories</a></li>
+            <li><a href="../../tutorial.html">Tutorial</a></li>
         </ul>
 
-        <!-- Partie droite -->
+        <!-- Right section -->
         <ul class="right">
             <li><a href="../../panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="../../contact.html">À propos</a></li>
+            <li><a href="../../about.html">About</a></li>
         </ul>
     </nav>
 
     <nav class="sous-menu">
-        <!-- Menu secondaire avec des options de filtrage par catégorie (luge, raquettes, ski alpin, snowboard) -->
+        <!-- Secondary menu with filtering options by category (sled, snowshoes, alpine skiing, snowboarding) -->
         <ul class="center">
-            <li><a href="luge.html">Luge</a></li>
-            <li><a href="raquettes.html">Raquettes</a></li>
-            <li><a href="ski_alpin.html">Ski alpin</a></li>
-            <li><a href="snowboard.html">Snowboard</a></li>
+            <li><a href="sled.html">Sled</a></li>
+            <li><a href="snowshoeing.html">Snowshoes</a></li>
+            <li><a href="skiAlpin.html">Alpine Skiing</a></li>
+            <li><a href="snowbording.html">Snowboarding</a></li>
         </ul>
     </nav>
-
 
     <main>
         <section class="articles">
 
             <div class="article">
-                <img src="../../images/OngletAccessoire/raquettes/raquettes.jpg" alt="Raquettes">
+                <img src="../../images/OngletAccessoire/raquettes/raquettes.jpg" alt="Snowshoes">
                 <div class="details">
-                    <p class="name">Raquettes</p>
-                    <p class="price">167,00€</p>
+                    <p class="name">Snowshoes</p>
+                    <p class="price">167.00 €</p>
                 </div>
                 <form action="../../panier.php" method="post">
-                    <input type="hidden" name="nom" value="Raquettes">
+                    <input type="hidden" name="nom" value="Snowshoes">
                     <input type="hidden" name="prix" value="167.00">
-                    <label for="quantite_raquettes">Quantité :</label>
+                    <label for="quantite_raquettes">Quantity:</label>
                     <input type="number" name="nombre" id="quantite_raquettes" value="1" min="1">
-                    <button type="submit">Ajouter au panier</button>
+                    <button type="submit">Add to Cart</button>
                 </form>
             </div>
+
             <div class="article">
-                <img src="../../images/OngletAccessoire/raquettes/baton raquette.webp" alt="Bâtonsraquettes">
+                <img src="../../images/OngletAccessoire/raquettes/baton raquette.webp" alt="Snowshoe Poles">
                 <div class="details">
-                    <p class="name">Bâtons pour raquettes</p>
-                    <p class="price">89,99 €</p>
+                    <p class="name">Snowshoe Poles</p>
+                    <p class="price">89.99 €</p>
                 </div>
                 <form action="../../panier.php" method="post">
-                    <input type="hidden" name="nom" value="Batons pour raquettes">
+                    <input type="hidden" name="nom" value="Snowshoe Poles">
                     <input type="hidden" name="prix" value="89.99">
-                    <label for="quantite_Bâtons_raquettes">Quantité :</label>
+                    <label for="quantite_Bâtons_raquettes">Quantity:</label>
                     <input type="number" name="nombre" id="quantite_Bâtons_raquettes" value="1" min="1">
-                    <button type="submit">Ajouter au panier</button>
+                    <button type="submit">Add to Cart</button>
                 </form>
             </div>
 

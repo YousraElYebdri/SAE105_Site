@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/accessoires.css">
+    <title>MMI Sports de glisse</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
+</head>
+
+<body>
+
+    <nav class="menu-info">
+        <ul class="right-info">
+            <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
+            <li><a href="snowbording.html"><img src="../../images/royaume-uni.png" alt="anglais" class="langue"></a></li>
+        </ul>
+    </nav>
+
+
+    <nav class="menu">
+        <!-- Partie droite avec logo et nom -->
+        <ul class="left">
+            <li>
+                <a href="../../index.html">
+                    <img src="../../images/favicon.png" alt="Logo" class="logo">
+                </a>
+            </li>
+            <li><a href="../../index.html">MMI SDH</a></li>
+        </ul>
+
+        <!-- Partie centrale -->
+        <ul class="center">
+            <li><a href="../../vetements/vetement.html">Vêtements</a></li>
+            <li><a href="../accessoire.html">Accessoire</a></li>
+            <li><a href="../../tutoriel.html">Tutoriel</a></li>
+
+        </ul>
+
+        <!-- Partie droite -->
+        <ul class="right">
+            <li><a href="../../panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="../../contact.html">À propos</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sous-menu">
+        <!-- Menu secondaire avec des options de filtrage par catégorie (luge, raquettes, ski alpin, snowboard) -->
+        <ul class="center">
+            <li><a href="luge.html">Luge</a></li>
+            <li><a href="raquettes.html">Raquettes</a></li>
+            <li><a href="ski_alpin.html">Ski alpin</a></li>
+            <li><a href="snowboard.html">Snowboard</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section class="articles">
+
+            <div class="article">
+                <img src="../../images/OngletAccessoire/snowboard/snowboard.jpg" alt="snowboard">
+                <div class="details">
+                    <p class="name">Snowboard</p>
+                    <p class="price">359,99 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Snowboard">
+                    <input type="hidden" name="prix" value="359.99">
+                    <label for="quantite_Snowboard">Quantité :</label>
+                    <input type="number" name="nombre" id="quantite_Snowboard" value="1" min="1">
+                    <button type="submit">Ajouter au panier</button>
+                </form>
+            </div>
+
+            <div class="article">
+                <img src="../../images/OngletAccessoire/snowboard/fixation.webp" alt="snowboard fixation">∑
+                <div class="details">
+                    <p class="name">Fixations pour Snowboard</p>
+                    <p class="price">134,90€</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="fiixation snowboard>∑
+                        <input type=" hidden" name="prix" value="134.90">
+                    <label for="quantite_fixation_snoawbaord">Quantité :</label>
+                    <input type="number" name="nombre" id="quantite_fixation_snoawbaord" value="1" min="1">
+                    <button type="submit">Ajouter au panier</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

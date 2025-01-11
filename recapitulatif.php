@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-<nav class="menu-info">
+    <nav class="menu-info">
         <ul class="right-info">
-            <li><a href="#">MON COMPTE</a></li>
+            <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
+            <li><a><img src="images/royaume-uni.png" alt="anglais" class="langue"></a></li>
         </ul>
     </nav>
 

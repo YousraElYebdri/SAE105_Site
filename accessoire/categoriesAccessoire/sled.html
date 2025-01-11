@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,86 +11,85 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles/accessoires.css">
-    <title>MMI Sports de glisse</title>
+    <title>MMI Winter Sports</title>
     <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
 </head>
 
 <body>
 
     <nav class="menu-info">
-        <ul class="right-info">
-            <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
-            <li><a href="sled.html"><img src="../../images/royaume-uni.png" alt="anglais" class="langue"></a></li>
-        </ul>
+        <nav class="menu-info">
+            <ul class="right-info">
+                <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
+                <li><a href="luge.html"><img src="../../images/icons8-la-france-96.png" alt="French" class="langue"></a></li>
+            </ul>
+        </nav>
     </nav>
 
-
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
+        <!-- Left section with logo and name -->
         <ul class="left">
             <li>
-                <a href="../../index.html">
+                <a href="../../index_en.html">
                     <img src="../../images/favicon.png" alt="Logo" class="logo">
                 </a>
             </li>
-            <li><a href="../../index.html">MMI SDH</a></li>
+            <li><a href="../../index_en.html">MMI SDH</a></li>
         </ul>
 
-        <!-- Partie centrale -->
+        <!-- Center section -->
         <ul class="center">
-            <li><a href="../../vetements/vetement.html">Vêtements</a></li>
-            <li><a href="../accessoire.html">Accessoire</a></li>
-            <li><a href="../../tutoriel.html">Tutoriel</a></li>
-
+            <li><a href="../../vetements/clothing.html">Clothing</a></li>
+            <li><a href="../accessories.html">Accessories</a></li>
+            <li><a href="../../tutorial.html">Tutorial</a></li>
         </ul>
 
-        <!-- Partie droite -->
+        <!-- Right section -->
         <ul class="right">
             <li><a href="../../panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="../../contact.html">À propos</a></li>
+            <li><a href="../../about.html">About</a></li>
         </ul>
     </nav>
 
     <nav class="sous-menu">
-        <!-- Menu secondaire avec des options de filtrage par catégorie (luge, raquettes, ski alpin, snowboard) -->
+        <!-- Secondary menu with filtering options by category (sled, snowshoes, alpine skiing, snowboarding) -->
         <ul class="center">
-            <li><a href="luge.html">Luge</a></li>
-            <li><a href="raquettes.html">Raquettes</a></li>
-            <li><a href="ski_alpin.html">Ski alpin</a></li>
-            <li><a href="snowboard.html">Snowboard</a></li>
+            <li><a href="sled.html">Sled</a></li>
+            <li><a href="snowshoeing.html">Snowshoes</a></li>
+            <li><a href="skiAlpin.html">Alpine Skiing</a></li>
+            <li><a href="snowbording.html">Snowboarding</a></li>
         </ul>
     </nav>
-
 
     <main>
         <section class="articles">
             <div class="article">
-                <img src="../../images/OngletAccessoire/luge/luge.webp" alt="Luge">
+                <img src="../../images/OngletAccessoire/luge/luge.webp" alt="Sled">
                 <div class="details">
-                    <p class="name">Luge</p>
-                    <p class="price">199,99 €</p>
+                    <p class="name">Sled</p>
+                    <p class="price">199.99 €</p>
                 </div>
                 <form action="../../panier.php" method="post">
-                    <input type="hidden" name="nom" value="Luge">
+                    <input type="hidden" name="nom" value="Sled">
                     <input type="hidden" name="prix" value="199.99">
-                    <label for="quantite_luge">Quantité :</label>
+                    <label for="quantite_luge">Quantity:</label>
                     <input type="number" name="nombre" id="quantite_luge" value="1" min="1">
-                    <button type="submit">Ajouter au panier</button>
+                    <button type="submit">Add to Cart</button>
                 </form>
             </div>
 
             <div class="article">
-                <img src="../../images/OngletAccessoire/luge/cordeLuge.webp" alt="Corde luge">
+                <img src="../../images/OngletAccessoire/luge/cordeLuge.webp" alt="Sled Rope">
                 <div class="details">
-                    <p class="name">Corde pour luge</p>
-                    <p class="price">39,99 €</p>
+                    <p class="name">Sled Rope</p>
+                    <p class="price">39.99 €</p>
                 </div>
                 <form action="../../panier.php" method="post">
-                    <input type="hidden" name="nom" value="cordeLuge">
+                    <input type="hidden" name="nom" value="Sled Rope">
                     <input type="hidden" name="prix" value="39.99">
-                    <label for="quantite_corde_luge">Quantité :</label>
+                    <label for="quantite_corde_luge">Quantity:</label>
                     <input type="number" name="nombre" id="quantite_corde_luge" value="1" min="1">
-                    <button type="submit">Ajouter au panier</button>
+                    <button type="submit">Add to Cart</button>
                 </form>
             </div>
         </section>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>MMI Sports de glisse</title>
+    <title>MMI Winter Sports</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 </head>
 
@@ -20,106 +20,101 @@
     <nav class="menu-info">
         <ul class="right-info">
             <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
-            <li><a href="about.html"><img src="images/royaume-uni.png" alt="anglais" class="langue"></a></li>
+            <li><a href="contact.html"><img src="images/icons8-la-france-96.png" alt="français" class="langue"></a></li>
         </ul>
     </nav>
 
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
+        <!-- Left section with logo and name -->
         <ul class="left">
             <li>
-                <a href="index.html">
+                <a href="index_en.html">
                     <img src="images/favicon.png" alt="Logo" class="logo">
                 </a>
             </li>
-            <li><a href="index.html">MMI SDG</a></li>
+            <li><a href="index_en.html">MMI SDG</a></li>
         </ul>
 
-        <!-- Partie centrale -->
+        <!-- Center section -->
         <ul class="center">
-            <li><a href="vetements/vetement.html">Vêtements</a></li>
-            <li><a href="accessoire/accessoire.html">Accessoire</a></li>
-            <li><a href="tutoriel.html">Tutoriel</a></li>
-
+            <li><a href="vetements/clothing.html">Clothing</a></li>
+            <li><a href="accessoire/accessories.html">Accessories</a></li>
+            <li><a href="tutorial.html">Tutorial</a></li>
         </ul>
 
-        <!-- Partie droite -->
+        <!-- Right section -->
         <ul class="right">
             <li><a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="contact.html">À propos</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
-
-
 
     <main>
         <form method="post" action="Scripts/form.php">
             <fieldset>
                 <div class="formText">
-                    <legend>FORMULAIRE DE CONTACT</legend>
+                    <legend>CONTACT FORM</legend>
 
                     <div>
-                        <label for="civilite">Civilité : </label>
+                        <label for="civilite">Title: </label>
                         <select id="civilite" name="civilite">
-                            <option value="">Choisissez votre civilité</option>
-                            <option value="Homme">Homme</option>
-                            <option value="Femme">Femme</option>
-                            <option value="Non genré">Non genré</option>
+                            <option value="">Choose your title</option>
+                            <option value="Homme">Mr.</option>
+                            <option value="Femme">Ms.</option>
+                            <option value="Non genré">Non-gendered</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="nom">Nom :</label>
+                        <label for="nom">Last Name:</label>
                         <input type="text" id="nom" name="nom">
                     </div>
 
                     <div>
-                        <label for="prenom">Prénom :</label>
+                        <label for="prenom">First Name:</label>
                         <input type="text" id="prenom" name="prenom">
                     </div>
 
                     <div>
-                        <label for="adresse">Adresse :</label>
+                        <label for="adresse">Address:</label>
                         <input type="text" id="adresse" name="adresse">
                     </div>
 
                     <div>
-                        <label for="datenaissance">Date de Naissance :</label>
+                        <label for="datenaissance">Date of Birth:</label>
                         <input type="date" id="datenaissance" name="datenaissance">
                     </div>
 
                     <div>
-                        <label for="mail">Adresse mail :</label>
+                        <label for="mail">Email Address:</label>
                         <input type="email" id="mail" name="mail" required>
                     </div>
 
                     <div>
-                        <label for="sport">Sport pratiqué :</label>
+                        <label for="sport">Sport Practiced:</label>
                         <div>
                             <input type="checkbox" id="ski" name="ski" value="SKI Alpin">
-                            <label for="SKI Alpin">SKI ALPIN</label>
+                            <label for="SKI Alpin">Alpine Skiing</label>
 
                             <input type="checkbox" id="rqt" name="rqt" value="Raquettes">
-                            <label for="Raquettes">Raquettes</label>
+                            <label for="Raquettes">Snowshoeing</label>
 
                             <input type="checkbox" id="luge" name="luge" value="Luge">
-                            <label for="Luge"> Luge </br></label>
+                            <label for="Luge">Luge </br></label>
 
                             <input type="checkbox" id="swb" name="swb" value="Snowboard">
-                            <label for="Snowboard">Snowboard</label>
+                            <label for="Snowboard">Snowboarding</label>
                         </div>
-
                     </div>
                 </div>
 
-
                 <div class="map-container">
-                    <legend> ZONE PRATIQUÉ </legend>
-                    <!-- Image de la carte avec la map associée -->
+                    <legend>PRACTICED AREA</legend>
+                    <!-- Map image with associated clickable areas -->
                     <img class="carte" src="images/contact/carteAlpesNord.webp"
-                        alt="carte de zone de lieu pratique du sport" usemap="#carte">
+                        alt="Map of sports practice area" usemap="#carte">
 
-                    <!-- Définition des zones cliquables -->
+                    <!-- Definition of clickable areas -->
                     <map name="carte">
                         <area target="" alt="Thonon-les-bains" title="Thonon-les-bains" href="#" coords="174,12,301,52"
                             shape="rect"
@@ -145,18 +140,17 @@
                         <area target="" alt="Grenoble" title="Grenoble" href="#" coords="30,282,108,323" shape="rect"
                             onclick="document.getElementById('zoneSelectionnee').value='Grenoble'"></area>
 
-                        <area target="" alt="briancon" title="briancon" href="#" coords="192,350,266,388" shape="rect"
+                        <area target="" alt="Briançon" title="Briançon" href="#" coords="192,350,266,388" shape="rect"
                             onclick="document.getElementById('zoneSelectionnee').value='Briançon'"></area>
                     </map>
 
-                    <!-- Champ pour afficher la zone sélectionnée -->
-                    <input type="text" id="zoneSelectionnee" name="zoneSelectionnee" class="zoneSelectionnee" placeholder="Zone sélectionnée" readonly>
+                    <!-- Field to display the selected zone -->
+                    <input type="text" id="zoneSelectionnee" name="zoneSelectionnee" class="zoneSelectionnee" placeholder="Selected Area" readonly>
                 </div>
-
             </fieldset>
             <div>
-                <input class="bouton" type="submit" value="Envoyer le formulaire">
-                <input class="bouton" type="reset" value=" Effacer le formulaire ">
+                <input class="bouton" type="submit" value="Submit Form">
+                <input class="bouton" type="reset" value="Reset Form">
             </div>
         </form>
     </main>

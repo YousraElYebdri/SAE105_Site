@@ -10,7 +10,7 @@
     justify-content: flex-end;
     align-items: center;
     background-color: #673b8d;
-    padding: 2px 0; /* TrÃ¨s petit padding vertical pour rÃ©duire la hauteur */
+    padding: 2px 0;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -18,20 +18,22 @@
 .menu-info .right-info {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espace horizontal entre les Ã©lÃ©ments */
+    gap: 0px;
     list-style: none;
 }
 
 .menu-info .right-info li {
-    margin: 0; /* Suppression des marges */
-    padding: 0 30px; /* Suppression des paddings */
+    margin: 0;
+    padding: 0 20px;
 }
 
 .menu-info .right-info li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 8px; /* Taille inchangÃ©e */
-    
+    font-size: 20px;
+}
+.menu-info .langue {
+    width: 30px;
 }
 /* Style de la navigation */
 .menu {

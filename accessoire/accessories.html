@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/accessoires.css">
+    <title>MMI Winter Sports</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+</head>
+
+<body>
+
+    <nav class="menu-info">
+        <ul class="right-info">
+            <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
+            <li><a href="accessoire.html"><img src="../images/royaume-uni.png" alt="English" class="langue"></a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu">
+        <!-- Left section with logo and name -->
+        <ul class="left">
+            <li>
+                <a href="../index_en.html">
+                    <img src="../images/favicon.png" alt="Logo" class="logo">
+                </a>
+            </li>
+            <li><a href="../index_en.html">MMI SDH</a></li>
+        </ul>
+
+        <!-- Center section -->
+        <ul class="center">
+            <li><a href="../vetements/clothing.html">Clothing</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="../tutorial.html">Tutorial</a></li>
+        </ul>
+
+        <!-- Right section -->
+        <ul class="right">
+            <li><a href="../panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="../about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sous-menu">
+        <!-- Secondary menu with filtering options by category (sled, snowshoes, alpine skiing, snowboard) -->
+        <ul class="center">
+            <li><a href="categoriesAccessoire/sled.html">Sled</a></li>
+            <li><a href="categoriesAccessoire/snowshoeing.html">Snowshoes</a></li>
+            <li><a href="categoriesAccessoire/skiAlpin.html">Alpine Skiing</a></li>
+            <li><a href="categoriesAccessoire/snowbording.html">Snowboarding</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="articles">
+            <div class="article">
+                <img src="../images/OngletAccessoire/luge/luge.webp" alt="Sled">
+                <div class="details">
+                    <p class="name">Sled</p>
+                    <p class="price">199.99 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Sled">
+                    <input type="hidden" name="prix" value="199.99">
+                    <label for="quantite_luge">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_luge" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <div class="article">
+                <img src="../images/OngletAccessoire/luge/cordeLuge.webp" alt="Sled Rope">
+                <div class="details">
+                    <p class="name">Sled Rope</p>
+                    <p class="price">39.99 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Sled Rope">
+                    <input type="hidden" name="prix" value="39.99">
+                    <label for="quantite_corde_luge">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_corde_luge" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <div class="article">
+                <img src="../images/OngletAccessoire/raquettes/raquettes.jpg" alt="Snowshoes">
+                <div class="details">
+                    <p class="name">Snowshoes</p>
+                    <p class="price">167.00 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Snowshoes">
+                    <input type="hidden" name="prix" value="167.00">
+                    <label for="quantite_raquettes">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_raquettes" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <div class="article">
+                <img src="../images/OngletAccessoire/raquettes/baton raquette.webp" alt="Snowshoe Poles">
+                <div class="details">
+                    <p class="name">Snowshoe Poles</p>
+                    <p class="price">89.99 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Snowshoe Poles">
+                    <input type="hidden" name="prix" value="89.99">
+                    <label for="quantite_Bâtons_raquettes">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_Bâtons_raquettes" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <div class="article">
+                <img src="../images/OngletAccessoire/ski alpin/fixationAlpinNoir.webp" alt="Black Alpine Ski Binding">
+                <div class="details">
+                    <p class="name">Black Alpine Ski Binding</p>
+                    <p class="price">129.99 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Black Alpine Ski Binding">
+                    <input type="hidden" name="prix" value="129.99">
+                    <label for="quantite_fixation_alpin_noir">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_fixation_alpin_noir" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="article">
+                <img src="../images/OngletAccessoire/ski alpin/skiAlpinNoir.webp" alt="Black Alpine Ski">
+                <div class="details">
+                    <p class="name">Black Alpine Ski</p>
+                    <p class="price">480.80 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Black Alpine Ski">
+                    <input type="hidden" name="prix" value="480.80">
+                    <label for="quantite_Ski_alpin_noir">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_Ski_alpin_noir" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="article">
+                <img src="../images/OngletAccessoire/ski alpin/skipAlpin.webp" alt="White Alpine Ski">
+                <div class="details">
+                    <p class="name">White Alpine Ski</p>
+                    <p class="price">524.90 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="White Alpine Ski">
+                    <input type="hidden" name="prix" value="524.90">
+                    <label for="quantite_Ski_alpin_blanc">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_Ski_alpin_blanc" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="article">
+                <img src="../images/OngletAccessoire/ski alpin/baton.jpg" alt="Alpine Ski Poles">
+                <div class="details">
+                    <p class="name">Alpine Ski Poles</p>
+                    <p class="price">53.90 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Alpine Ski Poles">
+                    <input type="hidden" name="prix" value="53.90">
+                    <label for="quantite_Ski_alpin_Baton">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_Ski_alpin_Baton" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="article">
+                <img src="../images/OngletAccessoire/snowboard/snowboard.jpg" alt="Snowboard">
+                <div class="details">
+                    <p class="name">Snowboard</p>
+                    <p class="price">359.99 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Snowboard">
+                    <input type="hidden" name="prix" value="359.99">
+                    <label for="quantite_Snowboard">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_Snowboard" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="article">
+                <img src="../images/OngletAccessoire/snowboard/fixation.webp" alt="Snowboard Bindings">
+                <div class="details">
+                    <p class="name">Snowboard Bindings</p>
+                    <p class="price">134.90 €</p>
+                </div>
+                <form action="../panier.php" method="post">
+                    <input type="hidden" name="nom" value="Snowboard Bindings">
+                    <input type="hidden" name="prix" value="134.90">
+                    <label for="quantite_fixation_snowboard">Quantity:</label>
+                    <input type="number" name="nombre" id="quantite_fixation_snowboard" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
