@@ -91,19 +91,40 @@
                     </div>
 
                     <div>
+                        <!-- Label d'introduction pour la section -->
                         <label for="sport">Sport Practiced:</label>
-                        <div>
-                            <input type="checkbox" id="ski" name="ski" value="SKI Alpin">
-                            <label for="SKI Alpin">Alpine Skiing</label>
-
-                            <input type="checkbox" id="rqt" name="rqt" value="Raquettes">
-                            <label for="Raquettes">Snowshoeing</label>
-
-                            <input type="checkbox" id="luge" name="luge" value="Luge">
-                            <label for="Luge">Luge </br></label>
-
-                            <input type="checkbox" id="swb" name="swb" value="Snowboard">
-                            <label for="Snowboard">Snowboarding</label>
+                        
+                        <!-- Conteneur gérant l’affichage en grille (2 par ligne) -->
+                        <div class="checkbox-list">
+                            
+                            <!-- Alpine Skiing -->
+                            <label class="checkbox-container">
+                                Alpine Skiing
+                                <input type="checkbox" id="ski" name="ski" value="SKI Alpin">
+                                <span class="checkmark"></span>
+                            </label>
+                    
+                            <!-- Snowshoeing -->
+                            <label class="checkbox-container">
+                                Snowshoeing
+                                <input type="checkbox" id="rqt" name="rqt" value="Raquettes">
+                                <span class="checkmark"></span>
+                            </label>
+                    
+                            <!-- Luge -->
+                            <label class="checkbox-container">
+                                Luge
+                                <input type="checkbox" id="luge" name="luge" value="Luge">
+                                <span class="checkmark"></span>
+                            </label>
+                    
+                            <!-- Snowboarding -->
+                            <label class="checkbox-container">
+                                Snowboarding
+                                <input type="checkbox" id="swb" name="swb" value="Snowboard">
+                                <span class="checkmark"></span>
+                            </label>
+                            
                         </div>
                     </div>
                 </div>

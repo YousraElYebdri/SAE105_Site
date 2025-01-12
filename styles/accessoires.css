@@ -10,111 +10,91 @@
     justify-content: flex-end;
     align-items: center;
     background-color: #673b8d;
-    padding: 2px 0;
+    padding: 5px 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-/* Liste droite dans menu-info */
 .menu-info .right-info {
     display: flex;
     align-items: center;
-    gap: 0px;
+    gap: 10px;
     list-style: none;
-}
-
-.menu-info .right-info li {
-    margin: 0;
-    padding: 0 20px;
 }
 
 .menu-info .right-info li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
 }
+
 .menu-info .langue {
     width: 30px;
 }
 
-/* Style de la navigation principale */
+/* Menu principal */
 .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
+    flex-wrap: wrap;
+    padding: 10px 20px;
     background-color: #12233b;
+    position: relative;
 }
 
-/* Style des listes dans chaque section */
-.menu ul {
+/* Partie gauche */
+.menu .left {
     display: flex;
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Partie gauche (logo et nom) */
-.menu .left {
     gap: 10px;
-    padding-left: 20px;
 }
 
-/* Partie centrale */
-.menu .center {
-    gap: 40px;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-/* Partie droite (panier) */
-.menu .right {
-    gap: 20px;
-    padding-right: 20px;
-}
-
-/* Style des liens du menu */
-.menu li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: "Rowdies", sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Transition de couleur */
-}
-
-.menu .right li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 12px;
-    transition: color 0.3s ease; /* Transition de couleur */
-}
-
-.menu .right li a i {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s ease; /* Transition de couleur */
-}
-
-/* Couleur au survol */
-.menu li a:hover {
-    color: #3f7acb;
-}
-
-.menu li a i:hover {
-    color: #3f7acb;
-}
-
-/* Logo */
 .menu .logo {
     width: 30px;
     max-width: 100%;
 }
 
-/* Deuxième barre de menu */
+/* Partie centrale */
+.menu .center {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Partie droite */
+.menu .right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Liens */
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    color: #3f7acb;
+}
+
+/* Menu burger */
+.menu-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+/* Style de la navigation */
 .sous-menu {
     display: flex;
     align-items: center;
@@ -124,6 +104,7 @@
     background-color: #3f7acb;
 }
 
+/* Style des listes dans chaque section */
 .sous-menu ul {
     display: flex;
     align-items: center;
@@ -132,12 +113,14 @@
     padding: 0;
 }
 
+/* Partie centrale */
 .sous-menu .center {
     gap: 40px;
     flex-grow: 1;
     justify-content: center;
 }
 
+/* Style des liens */
 .sous-menu li a {
     color: #ffffff;
     text-decoration: none;
@@ -145,11 +128,63 @@
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+/* Couleur de survol */
+.sous-menu li a:hover {
+    color: #3f7acb; /* Couleur au survol */
+}
+.menu-burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #ffffff;
 }
 
-.sous-menu li a:hover {
-    color: #3f7acb; 
+/* Toggle checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-burger {
+        display: flex;
+    }
+
+    .menu .center,
+    .menu .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #12233b;
+        padding: 10px 0;
+    }
+
+    .menu-toggle:checked ~ .center,
+    .menu-toggle:checked ~ .right {
+        display: flex;
+    }
+
+    .menu .center li,
+    .menu .right li {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu li a {
+        font-size: 10px;
+    }
+
+    .menu .logo {
+        width: 25px;
+    }
+
+    .menu-burger span {
+        width: 20px;
+    }
 }
 
 /* Mise en page principale */
@@ -210,11 +245,6 @@ a.article {
     text-decoration: none;
 }
 
-.article img {
-    margin-bottom: 10px;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
 
 .article:hover {
     transform: scale(1.05);
@@ -275,18 +305,28 @@ a.article {
 }
 
 /* Responsive : tablettes */
-@media (max-width: 767px) {
+@media (max-width: 770px) {
     main {
         grid-template-columns: 1fr;
     }
 
     .articles {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
     .article {
         margin-bottom: 10px;
+        width: 300px;
+    }
+
+    .article img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
     }
 
     .article .details .name {
@@ -300,47 +340,6 @@ a.article {
 
 /* Responsive : mobiles */
 @media (max-width: 480px) {
-    .toggle {
-        display: block; /* Affiche l'icône de bascule */
-    }
-
-    .menu {
-        display: none; /* Cache le menu par défaut */
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #12233b;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        padding: 10px 0;
-    }
-
-    #toggle:checked ~ .menu {
-        display: flex; /* Affiche le menu si l'input est coché */
-    }
-
-    .menu ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu li {
-        margin: 5px 0;
-    }
-
-    .menu a {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        text-align: left;
-        border-bottom: 1px solid #3f7acb;
-    }
-
-    .menu a:hover {
-        background-color: #3f7acb;
-    }
 
     main {
         grid-template-columns: 1fr;

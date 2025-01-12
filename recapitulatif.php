@@ -10,18 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <title>MMI SDG</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/style_contact.css">
 </head>
 <body>
+   <!-- Menu info -->
     <nav class="menu-info">
         <ul class="right-info">
             <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
-            <li><a><img src="images/royaume-uni.png" alt="anglais" class="langue"></a></li>
+            <li><a href="about.html"><img src="../images/royaume-uni.png" alt="anglais" class="langue"></a></li>
         </ul>
     </nav>
 
+    <!-- Menu principal -->
     <nav class="menu">
-        <!-- Partie droite avec logo et nom -->
+        <!-- Partie gauche avec logo et nom -->
         <ul class="left">
             <li>
                 <a href="../index.html">
@@ -31,12 +34,19 @@
             <li><a href="../index.html">MMI SDG</a></li>
         </ul>
 
+        <!-- Checkbox pour le toggle du menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <!-- Partie centrale -->
         <ul class="center">
             <li><a href="../vetements/vetement.html">Vêtements</a></li>
             <li><a href="../accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="../tutoriel.html">Tutoriel</a></li>
-
         </ul>
 
         <!-- Partie droite -->
@@ -90,8 +100,7 @@
                     height= auto
                     frameborder="0" 
                     src="https://meteofrance.com/widget/prevision/<?php echo $codeZone; ?>##673b8d"
-                    title="Prévisions <?php echo htmlspecialchars($zoneSelectionnee); ?> par Météo-France"
-                    style="border: 0px solid #10658E;border-radius: 8px">
+                    title="Prévisions <?php echo htmlspecialchars($zoneSelectionnee); ?> par Météo-France">
                 </iframe>
             </div>
         <?php } else { ?>

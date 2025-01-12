@@ -53,7 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nom'], $_POST['prix']
             <li><a href="#"><img src="../images/royaume-uni.png" alt="anglais" class="langue"></a></li>
         </ul>
     </nav>
-    <nav class="menu">
+   <!-- Menu principal -->
+   <nav class="menu">
+        <!-- Partie gauche avec logo et nom -->
         <ul class="left">
             <li>
                 <a href="index.html">
@@ -63,12 +65,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nom'], $_POST['prix']
             <li><a href="index.html">MMI SDG</a></li>
         </ul>
 
+        <!-- Checkbox pour le toggle du menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Partie centrale -->
         <ul class="center">
             <li><a href="vetements/vetement.html">Vêtements</a></li>
             <li><a href="accessoire/accessoire.html">Accessoire</a></li>
             <li><a href="tutoriel.html">Tutoriel</a></li>
         </ul>
 
+        <!-- Partie droite -->
         <ul class="right">
             <li><a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <li><a href="contact.html">À propos</a></li>

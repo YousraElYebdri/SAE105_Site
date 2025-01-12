@@ -11,116 +11,90 @@
     justify-content: flex-end;
     align-items: center;
     background-color: #673b8d;
-    padding: 2px 0;
+    padding: 5px 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-/* Liste droite dans menu-info */
 .menu-info .right-info {
     display: flex;
     align-items: center;
-    gap: 0px;
+    gap: 10px;
     list-style: none;
-}
-
-.menu-info .right-info li {
-    margin: 0;
-    padding: 0 20px;
 }
 
 .menu-info .right-info li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
 }
+
 .menu-info .langue {
     width: 30px;
 }
 
-
-/* Style de la navigation */
+/* Menu principal */
 .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
+    flex-wrap: wrap;
+    padding: 10px 20px;
     background-color: #12233b;
+    position: relative;
 }
 
-/* Style des listes dans chaque section */
-.menu ul {
+/* Partie gauche */
+.menu .left {
     display: flex;
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Partie gauche (logo et nom) */
-.menu .left {
     gap: 10px;
-    padding-left: 20px;
 }
 
-/* Partie centrale */
-.menu .center {
-    gap: 40px;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-/* Partie droite (panier) */
-.menu .right {
-    gap: 20px;
-    padding-right: 20px;
-}
-
-/* Style des liens */
-.menu li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: "Rowdies", sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    /* Transition de couleur */
-}
-
-.menu .right li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 12px;
-    transition: color 0.3s ease;
-    /* Transition de couleur */
-}
-
-.menu .right li a i {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s ease;
-    /* Transition de couleur */
-}
-
-/* Couleur de survol */
-.menu li a:hover {
-    color: #3f7acb;
-    /* Couleur au survol */
-}
-
-.menu li a i:hover {
-    color: #3f7acb;
-    /* Couleur au survol */
-}
-
-/* Logo */
 .menu .logo {
     width: 30px;
     max-width: 100%;
 }
 
+/* Partie centrale */
+.menu .center {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Partie droite */
+.menu .right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Liens */
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Rowdies", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    color: #3f7acb;
+}
+
+/* Menu burger */
+.menu-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 /* Style de la navigation */
 .sous-menu {
     display: flex;
@@ -155,14 +129,63 @@
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
-    transition: color 0.3s ease;
-    /* Transition de couleur */
+    transition: color 0.3s ease; /* Transition de couleur */
 }
-
 /* Couleur de survol */
 .sous-menu li a:hover {
-    color: #3f7acb;
-    /* Couleur au survol */
+    color: #3f7acb; /* Couleur au survol */
+}
+.menu-burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #ffffff;
+}
+
+/* Toggle checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-burger {
+        display: flex;
+    }
+
+    .menu .center,
+    .menu .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #12233b;
+        padding: 10px 0;
+    }
+
+    .menu-toggle:checked ~ .center,
+    .menu-toggle:checked ~ .right {
+        display: flex;
+    }
+
+    .menu .center li,
+    .menu .right li {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu li a {
+        font-size: 10px;
+    }
+
+    .menu .logo {
+        width: 25px;
+    }
+
+    .menu-burger span {
+        width: 20px;
+    }
 }
 
 /* Page vetements */
@@ -346,6 +369,7 @@ a.article {
     color: #777;
     margin: 5px 0 0 0;
 }
+
 /* Formulaire pour ajouter au panier */
 .article form {
     margin-top: 10px;
@@ -380,29 +404,155 @@ a.article {
     background-color: #3f7acb;
 }
 
-@media (max-width: 768px) {
-    .layout {
+/* Responsive pour filtres au-dessus et deux articles par ligne */
+@media (max-width: 1024px) {
+    .vetement {
+        display: flex;
         flex-direction: column;
-        /* Filtres au-dessus des articles */
+        gap: 20px;
     }
 
+    /* Filtres */
     .filters {
-        width: 100%;
-        /* Les filtres occupent toute la largeur */
+        padding: 12px;
+        gap: 10px;
+        border-radius: 8px;
+        max-width: 100%;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .article {
-        width: calc(50% - 10px);
-        /* Deux articles par ligne */
+    .filters label {
+        font-size: 12px;
+        padding: 8px 6px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .filters label:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        background-color: #ececec;
+    }
+
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        /* Une seule colonne */
+    }
+
+    section.vetements,
+    section.sous-vetements,
+    section.gants,
+    section.chaussures,
+    section.lunettes { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px auto;
+        padding: 10px;
+        max-width: 1300px;
+    }
+
+    .articles {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    /* Chaque article individuel */
+    .article {
+        display: block; /* Chaque article reste autonome */
+        padding: 10px;
+        background-color: #fff; /* Exemple de style */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .article .details .name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .article .details .price {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+    }
+
+    .article form {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .article form input[type="number"] {
+        width: 60px;
+        padding: 6px;
+        font-size: 14px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .article form button {
+        padding: 10px 18px;
+        font-size: 14px;
+        background-color: #673b8d;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .article form button:hover {
+        background-color: #3f7acb;
+    }
+
 }
 
+/* Responsive pour très petits écrans */
 @media (max-width: 480px) {
-    .article {
+    section.vetements,
+    section.sous-vetements,
+    section.gants,
+    section.chaussures,
+    section.lunettes { 
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px auto;
+        padding: 10px;
+        max-width: 1300px;
+    }
+
+    .articles {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
         width: 100%;
-        /* Un article par ligne */
+        margin: 0 auto;
+    }
+    /* Chaque article individuel */
+    .article {
+        display: block; /* Chaque article reste autonome */
+        padding: 10px;
+        background-color: #fff; /* Exemple de style */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 }
+
 
 .tutoriel {
     display: flex;
@@ -414,8 +564,8 @@ a.article {
     margin-bottom: 30px;
     text-align: center;
     flex: 1;
-    height: auto; /* Assure une hauteur correcte sur Safari */
-    min-height: 0; /* Évite les bugs de flex sur Safari */
+    height: auto;
+    min-height: 0;
 }
 
 .tutoriel h1 {
@@ -430,7 +580,7 @@ a.article {
 /* Section vidéos */
 .videos {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     width: 100%;
     max-width: 1200px;
@@ -493,74 +643,4 @@ a.article {
     .video h2 {
         font-size: 1.2rem;
     }
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #f4f4f4;
-}
-
-
-
-
-/* Section Récapitulatif */
-.recapitulatif {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: "Arial", sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-.recapitulatif h1 {
-    font-family: "Rowdies", sans-serif;
-    color: #673b8d;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.recapitulatif p {
-    font-family: "Rowdies", sans-serif;
-    margin-bottom: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 14px;
-}
-
-.recapitulatif p:last-child {
-    border-bottom: none;
-}
-
-.recapitulatif .highlight {
-    font-weight: bold;
-    color: #673b8d;
-}
-
-/* Liste pour les sports */
-.recapitulatif .sports-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.recapitulatif .sports-list span {
-    background-color: #f4f4f4;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    color: #333;
-    border: 1px solid #ddd;
 }
