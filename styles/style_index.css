@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Rowdies", sans-serif;
 }
 
 /* Style pour menu-info */
@@ -150,7 +151,7 @@
 }
 
 /* Je définis le style du bandeau principal */
-#bandeau {
+.bandeau {
     background-image: url("../images/bandeau.jpeg");
     background-size: cover;
     background-position: center;
@@ -163,7 +164,7 @@
     margin: 0;
 }
 
-#bandeau div {
+.bandeau div {
     padding: 0px 20px;
     /* Je limite le padding pour éviter les débordements horizontaux */
     margin-right: auto;
@@ -174,7 +175,7 @@
     max-width: 1000px;
 }
 
-#bandeau h1 {
+.bandeau h1 {
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000b9;
     font-family: "Rowdies", sans-serif;
@@ -185,8 +186,19 @@
     margin: 20px 2px;
     line-height: 40px;
 }
+.bandeau h2 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000b9;
+    font-family: "Rowdies", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 2px;
+    line-height: 40px;
+}
 
-#bandeau .btn {
+.bandeau .btn {
     background-color: #12233b;
     color: #ffffff;
     border: 2px solid #12233b;
@@ -206,7 +218,7 @@
     /* Transition de couleur uniquement */
 }
 
-#bandeau .btn:hover {
+.bandeau .btn:hover {
     background-color: #12233b45;
     border: 2px solid #12233b;
     color: #12233b;
@@ -297,7 +309,7 @@ hr {
 }
 
 /* Je configure la section sportHiver */
-#sportHiver {
+.sportHiver {
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -307,7 +319,7 @@ hr {
     /* J'assure que la section utilise toute la largeur disponible */
 }
 
-#sportHiver div {
+.sportHiver div {
     padding: 0px 10px;
     /* Je limite le padding pour éviter les débordements */
     margin-right: auto;
@@ -318,7 +330,7 @@ hr {
     max-width: 1250px;
 }
 
-#sportHiver h2 {
+.sportHiver h2 {
     color: #673b8d;
     font-family: "Rowdies", sans-serif;
     font-weight: bold;
@@ -329,7 +341,7 @@ hr {
     line-height: 40px;
 }
 
-#sportHiver p {
+.sportHiver p {
     font-family: "Rowdies", sans-serif;
     color: #12233b;
     font-size: 15px;
@@ -345,7 +357,7 @@ hr {
 }
 
 /* Style pour le bouton sans effet de redimensionnement */
-#sportHiver .btn {
+.sportHiver .btn {
     background-color: #673b8d;
     color: #ffffff;
     border: 2px solid #673b8d;
@@ -364,7 +376,7 @@ hr {
     /* Transition de couleur */
 }
 
-#sportHiver .btn:hover {
+.sportHiver .btn:hover {
     background-color: #673b8d45;
     border: 2px solid #673b8d;
     color: #673b8d;
@@ -384,7 +396,7 @@ footer {
         /* Deux colonnes */
     }
 
-    #bandeau h1 {
+    .bandeau h1 {
         font-size: 30px;
     }
 
@@ -401,12 +413,12 @@ footer {
         /* Une seule colonne */
     }
 
-    #sportHiver h2 {
+    .sportHiver h2 {
         font-size: 15px;
         line-height: 20px;
     }
 
-    #sportHiver p {
+    .sportHiver p {
         font-size: 10px;
         /* Plus petit texte pour petits écrans */
     }
@@ -420,10 +432,38 @@ footer {
     }
 
     /* Style pour le bouton sans effet de redimensionnement */
-    #sportHiver .btn {
+    .sportHiver .btn {
         font-size: 10px;
         text-transform: uppercase;
         padding: 15px 20px;
         margin: 5px 0;
+    }
+}
+
+/* Footer global styles */
+.site-footer {
+    background-color: #1e1e2f; 
+    color: #ffffff; 
+    padding: 20px 15px; 
+    text-align: center; 
+    border-top: 5px solid #673b8d; 
+
+}
+
+/* Footer content */
+.footer-content p {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px; 
+    margin: 0; 
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 15px 10px;
+    }
+
+    .footer-content p {
+        font-size: 10px; 
     }
 }

@@ -110,5 +110,10 @@
         <p>Aucune zone sélectionnée pour afficher la météo.</p>
     <?php } ?>
 </section>
+<footer class="site-footer">
+        <section class="footer-content">
+            <p>EL YEBDRI Yousra - THAIBAOUI Camélia - MMI 1</p>
+        </section>
+    </footer>
 </body>
 </html>

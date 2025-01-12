@@ -4,82 +4,70 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Spécifie que le texte utilise l'encodage UTF-8 pour supporter les caractères spéciaux -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Permet à la page d'être responsive et adaptée à tous les types d'écrans -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Charge la bibliothèque Font Awesome pour utiliser des icônes (comme celle du panier) -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Optimise les requêtes pour charger les polices Google Fonts -->
-
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Intègre une police personnalisée "Rowdies" pour le design -->
-
     <link rel="stylesheet" href="styles/style_index.css">
-    <!-- Lien vers une feuille de style locale pour personnaliser l'apparence du site -->
-
     <title>MMI Sports de glisse</title>
-    <!-- Déclare le titre de la page qui apparaît dans l'onglet du navigateur -->
-
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <!-- Ajoute une icône dans l'onglet du navigateur (favicon) -->
+    <meta name="description" content="Découvrez MMI Sports de glisse : vêtements, accessoires et tutoriels pour tous les amateurs de sports d'hiver ! ❄️">
 </head>
 
 <body>
 
     <nav class="menu-info">
         <ul class="right-info">
-            <li><a href="#"><i class="fa-solid fa-eye-low-vision"></i></a></li>
-            <li><a href="index_en.html"><img src="images/royaume-uni.png" alt="anglais" class="langue"></a></li>
+            <li><a href="#"><i class="fa-solid fa-eye-low-vision" aria-label="Mode pour malvoyants"></i></a></li>
+            <li><a href="index_en.html"><img src="images/royaume-uni.png" alt="Passer le site en anglais"
+                        class="langue"></a></li>
         </ul>
     </nav>
-   
-   <!-- Menu principal -->
-   <nav class="menu">
-    <!-- Partie gauche avec logo et nom -->
-    <ul class="left">
-        <li>
-            <a href="index.html">
-                <img src="images/favicon.png" alt="Logo" class="logo">
-            </a>
-        </li>
-        <li><a href="index.html">MMI SDG</a></li>
-    </ul>
 
-    <!-- Checkbox pour le toggle du menu -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
+    <!-- Menu principal -->
+    <nav class="menu">
+        <!-- Partie gauche avec logo et nom -->
+        <ul class="left">
+            <li>
+                <a href="index.html">
+                    <img src="images/favicon.png" alt="Logo" class="logo">
+                </a>
+            </li>
+            <li><a href="index.html">MMI SDG</a></li>
+        </ul>
 
-    <!-- Partie centrale -->
-    <ul class="center">
-        <li><a href="vetements/vetement.html">Vêtements</a></li>
-        <li><a href="accessoire/accessoire.html">Accessoire</a></li>
-        <li><a href="tutoriel.html">Tutoriel</a></li>
-    </ul>
+        <!-- Checkbox pour le toggle du menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <!-- Partie droite -->
-    <ul class="right">
-        <li><a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
-        <li><a href="contact.html">À propos</a></li>
-    </ul>
-</nav>
+        <!-- Partie centrale -->
+        <ul class="center">
+            <li><a href="vetements/vetement.html">Vêtements</a></li>
+            <li><a href="accessoire/accessoire.html">Accessoire</a></li>
+            <li><a href="tutoriel.html">Tutoriel</a></li>
+        </ul>
+
+        <!-- Partie droite -->
+        <ul class="right">
+            <li><a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="contact.html">À propos</a></li>
+        </ul>
+    </nav>
 
 
 
-    <section id="bandeau">
+    <section class="bandeau">
         <!-- Section principale (bandeau) avec un titre et des boutons pour rediriger vers des catégories spécifiques -->
         <div>
-            <h1>Explorez les sports d'hiver</h1>
+            <h1>MMI Sports de glisse - Explorez les sports d'hiver</h1>
+            <h2>Équipements et vêtements pour homme, femme et enfant</h2>
             <a class="btn" href="vetements/vetement.html">Vêtements</a>
             <a class="btn" href="accessoire/accessoire.html">Accesoires</a>
         </div>
@@ -87,7 +75,7 @@
     <hr>
     <!-- Ligne horizontale pour séparer les sections -->
 
-    <section id="sportHiver">
+    <section class="sportHiver">
         <!-- Présentation des sports d'hiver avec un titre et un paragraphe descriptif -->
         <div>
             <h2>Découvrez le meilleur des sports d’hiver chez MMI Sports de glisse ! ❄️</h2>
@@ -99,21 +87,24 @@
     <section class="article-galerie">
         <!-- Galerie d'articles avec des images pour chaque catégorie (Homme, Femme, Enfant) -->
         <a href="vetements/vetementsHomme/homme.html" class="article">
-            <img src="images/index/pexels-chris-f-38966-16248302.jpg" alt="Article Image 1" loading="lazy">
+            <img src="images/index/pexels-chris-f-38966-16248302.jpg" alt="Vêtements pour homme, modèle en montagne"
+                loading="lazy">
             <!-- Attribut "loading" pour optimiser le chargement différé des images -->
             <div class="text">Homme</div>
         </a>
         <a href="vetements/vetementsFemme/femme.html" class="article">
-            <img src="images/index/pexels-cottonbro-7364438.jpg" alt="Article Image 2" loading="lazy">
+            <img src="images/index/pexels-cottonbro-7364438.jpg" alt="Vêtements pour femme, modèle en montagne"
+                loading="lazy">
             <div class="text">Femme</div>
         </a>
         <a href="vetements/vetementsEnfant/enfant.html" class="article">
-            <img src="images/index/pexels-hurrahsuhail-11156954.jpg" alt="Article Image 3" loading="lazy">
+            <img src="images/index/pexels-hurrahsuhail-11156954.jpg" alt="Vêtements pour enfants, modèle en montagne"
+                loading="lazy">
             <div class="text">Enfant</div>
         </a>
     </section>
 
-    <section id="sportHiver">
+    <section class="sportHiver">
         <!-- Section expliquant les tutoriels disponibles -->
         <div>
             <h2>En quête de perfection ? Nos tutoriels d’experts pour chaque discipline ! </h2>
@@ -124,6 +115,12 @@
         </div>
     </section>
 
+    <footer class="site-footer">
+        <section class="footer-content">
+            <p>EL YEBDRI Yousra - THAIBAOUI Camélia - MMI 1</p>
+        </section>
+    </footer>
 </body>
+
 
 </html>

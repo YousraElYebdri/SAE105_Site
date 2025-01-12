@@ -143,6 +143,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nom'], $_POST['prix']
             </form>
         </div>
     </div>
+    <footer class="site-footer">
+        <section class="footer-content">
+            <p>EL YEBDRI Yousra - THAIBAOUI Camélia - MMI 1</p>
+        </section>
+    </footer>
 </body>
 
 </html>

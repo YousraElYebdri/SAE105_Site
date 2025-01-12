@@ -545,3 +545,31 @@ a.article {
         margin-top: 6px;
     }
 }
+
+/* Footer global styles */
+.site-footer {
+    background-color: #1e1e2f; 
+    color: #ffffff; 
+    padding: 20px 15px; 
+    text-align: center; 
+    border-top: 5px solid #673b8d; 
+
+}
+
+/* Footer content */
+.footer-content p {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px; 
+    margin: 0; 
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 15px 10px;
+    }
+
+    .footer-content p {
+        font-size: 10px; 
+    }
+}
